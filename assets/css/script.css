@@ -1,0 +1,56 @@
+/* زرار التبديل */
+#scroll-to-top {
+    position: fixed;
+    bottom: 0px;
+    transform: translate(0px, -180px);
+    left: 0;
+    font-size: 1.8rem;
+    z-index: 1111;
+    margin-left: 20px;
+    background-color: #1e1e2f; /* لون غامق مناسب للوضع الليلي */
+    color: #ffffff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 13px 14px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-radius: 50%;
+    opacity: 0.7;
+    transition: all 0.3s ease-in-out;
+}
+
+#scroll-to-top:hover {
+    opacity: 1;
+    background-color: #34344e;
+}
+
+.light {
+    color: white;
+}
+
+/* الوضع الليلي */
+.dark-mode {
+    background-color: #121212 !important;
+    color: #e0e0e0 !important;
+}
+
+.dark-mode header {
+    background-color: #1e1e2f !important;
+    color: #ffffff;
+}
+
+.dark-mode .footer-bottom {
+    background-color: #1b1b1b;
+    color: #888;
+}
+
+.dark-mode a {
+    color: #88ccff;
+}
+
+.dark-mode a:hover {
+    color: #ffffff;
+}
