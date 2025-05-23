@@ -24,27 +24,69 @@
 <!--// dark mode  //-->
 
 <!-- --header section design---->
+<!-- Header Section -->
 <header>
-        <div id="menu-bar" class="fas fa-bars" onclick="showmenu()"></div>
-        <a href="" class="logo"><span>E</span>-<span>S</span>tore</a>
-        <nav class="navbar">
-            <a href="/index.html" class="active">home</a>
-            <a href="/assets/page/about/index.html">About</a>
-            <a href="/assets/page/shop/index.html">Shop</a>
-            <a href="/assets/page/blog/index.html">Blog</a>
-            <a href="assets/page/contact/index.html">contact</a>
-        </nav>
-        <div class="icon">
-            <i class="fas fa-search" onclick="showbar()" id="search-btn"></i>
-            <i class="fas fa-user" onclick="showform()"></i>
-            <i class="ri-shopping-cart-line cart-icon" <a href="#"><span class="cart-count">0</span></a></i>
+    <!-- زر القائمة الجانبية (يظهر في الموبايل) -->
+    <div id="menu-bar" class="fas fa-bars" onclick="showmenu()"></div>
+    <!-- شعار الموقع -->
+    <a href="/index.html" class="logo"><span>E</span>-<span>S</span>tore</a>
+    <!-- قائمة الروابط الرئيسية -->
+    <nav class="navbar">
+        <a href="/index.html" class="active">Home</a>
+        <a href="/assets/page/about/about.html">About</a>
+        <a href="/assets/page/shop/shop.html">Shop</a>
+        <a href="/assets/page/blog/blog.html">Blog</a>
+        <a href="/assets/page/contact/contact.html">Contact</a>
+    </nav>
+    <!-- أيقونات التفاعل -->
+    <div class="icon">
+        <!-- البحث -->
+        <i class="fas fa-search" onclick="showbar()" id="search-btn" aria-label="Search"></i>
+        <!-- المستخدم -->
+        <i class="fas fa-user" onclick="showform()" aria-label="User Login"></i>
+        <!-- عربة التسوق -->
+        <a href="#" class="cart-icon" aria-label="Shopping Cart">
+            <i class="fas fa-shopping-cart"></i>
+            <!-- <span class="cart-count">0</span> -->
+        </a>
+    </div>
+    <!-- شريط البحث -->
+    <form action="" class="search-form">
+        <input type="search" id="search-bar" onkeyup="search()" placeholder="What are you looking for?">
+        <label for="search-bar" class="fas fa-search"></label>
+    </form>
+</header>
+<!-- //header section design// -->
+
+    <!-- aside open bar cart -->
+    <aside class="cart">
+        <h2>Shopping Cart</h2>
+        <ul>
+            <!-- Empty shopping cart -->
+        </ul>
+        <div class="total">
+            <span>Total:</span>
+            <span class="amount">$0</span>
         </div>
-        <!--   end of cart modal -->
-        <form action="" class="search-form">
-            <input type="search" id="search-bar" onkeyup="search ()" placeholder="What you looking for...">
-            <label for="search-bar" class="fas fa-search"></label>
+        <a href="/assets/page/sign up/signUp.html"><button class="done">Complete purchase</button></a>
+    </aside>
+    <!--// aside open bar cart //-->
+
+<!-- login-form -->
+<div class="login-form">
+        <i class="fas fa-times" id="form-close" onclick="hideform()"></i>
+        <form action="">
+            <h3>login</h3>
+            <input type="email" class="box" placeholder="Enter your email">
+            <input type="password" class="box" placeholder="Enter your password">
+            <a href="assets/page/sign up/index.html"><input type="submit" value="login now" class="btn"></a>
+            <input type="checkbox" id="remember">
+            <label for="remmember"> remember me</label>
+            <p>forget password? <a href="index.html">click here</a></p>
+            <p>don't have account? <a href="assets/page/sign up/index.html">sign up</a></p>
         </form>
-    </header>
+    </div>
+<!-- //login-form// -->
 
 
 
@@ -61,6 +103,11 @@
 
 
 
+<!--
+    - ionIcon link
+    -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <!--- ionIcon link -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
