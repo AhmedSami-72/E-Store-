@@ -1,0 +1,157 @@
+/* ==========  ما قبل التحميل (Pre-loader) ========== */
+#pre-loader {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 999999;
+    background-color: var(--white);
+    transition: all 300ms ease-in-out;
+}
+
+.loader {
+    height: 100vh;
+    width: 100vw;
+    background: url("/assets/images/loader/loader.svg") center/30rem no-repeat fixed;
+}
+
+#pre-loader.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+/* ==========  النافذة المنبثقة (Popup) ========== */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999999;
+    transition: 0.3s;
+    transform: scale(0.2);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.popup.show {
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    margin: 0 auto;
+    height: 55rem;
+    transform: translate(-50%, -50%);
+    padding: 1.6rem;
+    display: table;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: rgb(149, 238, 223);
+}
+
+/* زر إغلاق النافذة المنبثقة */
+.popup-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    padding: 1.4rem 1.6rem;
+    background-color: var(--white);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.popup-close i {
+    font-size: 2.5rem;
+    color: #000000;
+    transition: all 0.3s ease;
+}
+
+.popup-close i:hover {
+    transform: rotate(90deg) scale(1.1);
+    color: #ff4757;
+}
+
+/* محتوى النافذة المنبثقة */
+.popup-left {
+    display: table-cell;
+    width: 50%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.popup-right {
+    display: table-cell;
+    width: 50%;
+    vertical-align: middle;
+    padding: 3rem 5rem;
+}
+
+.popup-img img {
+    display: block;
+    width: 60rem;
+    height: 45rem;
+    max-width: 100%;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
+.right-content {
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.right-content h1 {
+    font-size: 4rem;
+    color: var(--black);
+    margin-bottom: 1.6rem;
+}
+
+.right-content h1 span {
+    color: var(--green);
+}
+
+.right-content p {
+    font-size: 1.8rem;
+    color: var(--white);
+    margin-bottom: 1.6rem;
+}
+
+/* نموذج النافذة المنبثقة */
+.popup-form {
+    width: 100%;
+    padding: 2rem 0;
+    padding-left: 2rem;
+    text-indent: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 1.6rem;
+    border-radius: 3rem;
+    border: none;
+}
+
+.right-content a {
+    display: inline-block;
+    padding: 1.8rem 5rem;
+    border-radius: 3rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+    background-color: var(--black);
+    border: 1px solid var(--grey2);
+    transition: 0.3s;
+}
+
+.right-content a:hover {
+    background-color: var(--green);
+    color: var(--black);
+}

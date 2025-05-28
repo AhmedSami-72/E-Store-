@@ -1,0 +1,290 @@
+/* Large screens */
+@media (max-width:1035px) {
+    #menu-bar {
+        display: initial; /* Show mobile menu icon */
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        display: block !important; /* Force vertical layout */
+        left: 0;
+        right: 0;
+        background: #33333344;
+        border-top: .1rem solid rgba(255, 255, 255, 0.486);
+        padding: 1rem 2rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* Initially hidden menu */
+    }
+
+    header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Show expanded menu */
+    }
+
+    header .navbar a {
+        display: block !important;
+        border-radius: .5rem;
+        padding: 1.5rem;
+        text-align: center;
+        margin: 1.5rem 0;
+        background: #ffffff; /* White background for menu items */
+    }
+
+    html {
+        font-size: 50%; /* Reduce base font size for mobile */
+    }
+}
+
+/* HOME SECTION - Responsive adjustments */
+@media (max-width: 1700px) {
+    section {
+        padding: 80px 3% 70px; /* Adjust section padding */
+    }
+
+    .home {
+        gap: 1rem; /* Reduce gap between home elements */
+    }
+}
+
+@media (max-width: 1410px) {
+    .row-text h6 {
+        margin-bottom: 5px; /* Adjust heading spacing */
+    }
+
+    .row-text h3 {
+        margin-bottom: 1rem;
+    }
+
+    .cta-text {
+        margin-left: 55px; /* Position call-to-action text */
+    }
+
+    .home {
+        height: 90vh; /* Adjust home section height */
+    }
+}
+
+@media (max-width: 940px) {
+    .home {
+        grid-template-columns: 1fr; /* Switch to single column layout */
+        text-align: center; /* Center align content */
+        height: 117vh; /* Adjust height */
+    }
+
+    .home-img img {
+        width: 500px;
+        max-width: 100%; /* Make image responsive */
+        height: auto;
+    }
+
+    .home-text {
+        padding-top: 50px; /* Add top padding */
+    }
+}
+
+
+
+/* ========== إعدادات الشبكة الأساسية ========== */
+.product-grid {
+    display: grid;
+    gap: 23px;
+}
+
+/* ========== شاشات كبيرة جداً (أكبر من 1200px) - 4 منتجات في الصف ========== */
+@media (min-width: 1200px) {
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* ========== شاشات كبيرة (992px إلى 1199px) - 3 منتجات في الصف ========== */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ========== شاشات متوسطة (768px إلى 991px) - 2 منتجات في الصف ========== */
+@media (min-width: 768px) and (max-width: 991px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ========== شاشات صغيرة (أقل من 768px) - 1 منتج في الصف ========== */
+@media (max-width: 767px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========== تعديلات إضافية للشاشات الصغيرة جداً ========== */
+@media (max-width: 480px) {
+    .product-grid .showcase-content {
+        padding: 10px 15px 0;
+    }
+    
+    .product-grid .showcase-category {
+        font-size: 1.2rem;
+    }
+    
+    .product-grid .showcase-title {
+        font-size: 1rem;
+    }
+}
+
+
+
+/* FOOTER - Responsive adjustments */
+@media (max-width: 900px) {
+    footer .content .link-boxes {
+        flex-wrap: wrap; /* Allow footer sections to wrap */
+    }
+
+    footer .content .link-boxes .input-box {
+        width: 40%; /* Adjust input box width */
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 700px) {
+    footer {
+        position: relative;
+    }
+
+    .content .top .logo-details {
+        font-size: 26px; /* Reduce logo size */
+    }
+
+    .content .top .media-icons a {
+        height: 35px;
+        width: 35px;
+        font-size: 14px; /* Adjust social icons */
+        line-height: 35px;
+    }
+
+    footer .content .link-boxes .box {
+        width: calc(100% / 3 - 10px); /* 3 boxes per row */
+    }
+
+    footer .content .link-boxes .input-box {
+        width: 60%; /* Adjust input box width */
+    }
+
+    .bottom-details .bottom_text span,
+    .bottom-details .bottom_text a {
+        font-size: 12px; /* Smaller footer text */
+    }
+}
+
+@media (max-width: 520px) {
+    footer::before {
+        top: 145px; /* Adjust decorative element */
+    }
+
+    footer .content .top {
+        flex-direction: column; /* Stack logo and social icons */
+    }
+
+    .content .top .media-icons {
+        margin-top: 16px; /* Add spacing */
+    }
+
+    footer .content .link-boxes .box {
+        width: calc(100% / 2 - 10px); /* 2 boxes per row */
+    }
+
+    footer .content .link-boxes .input-box {
+        width: 100%; /* Full width input box */
+    }
+}
+
+/* PRELOADER - Mobile adjustment */
+@media only screen and (max-width: 567px) {
+    .loader {
+        background-size: 20rem; /* Smaller loading animation */
+    }
+}
+
+/* POPUP MODAL - Responsive styles */
+@media only screen and (max-width: 1200px) {
+    .right-content {
+        width: 100%; /* Full width content */
+    }
+
+    .right-content h1 {
+        font-size: 3.5rem; /* Adjust heading size */
+        margin-bottom: 1.3rem;
+    }
+}
+
+@media only screen and (max-width: 998px) {
+    .popup-right {
+        width: 100%; /* Full width popup */
+    }
+
+    .popup-left {
+        display: none; /* Hide image on smaller screens */
+    }
+
+    .right-content h1 {
+        font-size: 5rem; /* Larger heading for medium screens */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .right-content h1 {
+        font-size: 4rem; /* Adjust heading size */
+    }
+
+    .right-content p {
+        font-size: 1.6rem; /* Adjust paragraph text */
+    }
+
+    .popup-form {
+        width: 90%; /* Narrower form */
+        margin: 0 auto;
+        padding: 1.8rem 0;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 568px) {
+    .popup-right {
+        padding: 0 1.6rem; /* Add side padding */
+    }
+
+    .popup-content {
+        height: 40rem;
+        width: 90%; /* Smaller popup */
+        margin: 0 auto;
+    }
+
+    .right-content {
+        width: 100%; /* Full width content */
+    }
+
+    .right-content h1 {
+        font-size: 3rem; /* Smaller heading */
+    }
+
+    .right-content p {
+        font-size: 1.4rem; /* Smaller text */
+    }
+
+    .popup-form {
+        width: 100%; /* Full width form */
+        padding: 1.5rem 0;
+        margin-bottom: 1.3rem;
+    }
+
+    .right-content a:link,
+    .right-content a:visited {
+        padding: 1.5rem 3rem; /* Button padding */
+    }
+
+    .popup-close {
+        top: 1rem;
+        right: 1rem;
+        padding: 1.3rem; /* Close button positioning */
+    }
+}

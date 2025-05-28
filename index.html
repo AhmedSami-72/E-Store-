@@ -27,9 +27,72 @@
     <i class="bi bi-brightness-high-fill" id="scroll-to-top"></i>
     <!--// dark mode  //-->
 
+    <!-- scroll -->
+    <i class="fa-solid fa-circle-up" id="scroll-to-top-button"></i>
+    <!--// scroll //-->
+ <!-- pre-loader -->
+    <!-- <div id="pre-loader">
+        <div class="loader"></div>
+    </div> -->
+    <!--// pre-loader //-->
 
+    <!-- PopUp -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <div class="popup-close">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="popup-left">
+                <div class="popup-img">
+                    <img src="assets/images/popup.png" alt="popup">
+                </div>
+            </div>
+            <div class="popup-right">
+                <div class="right-content">
+                    <h1>
+                        Get Discount <span>30%</span> Off
+                    </h1>
+                    <p>
+                        Sign up to our blogletter and save 30% for you next purchase. No spam, we promise!
+                    </p>
+                    <form action="#">
+                        <input type="email" placeholder="Enter your email..." class="popup-form">
+                        <a href="#" id="subscribe-btn">Subscribe</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--// PopUp //-->
 
-
+    <!-- --header section design---->
+<header>
+    <div id="menu-bar" class="fas fa-bars" onclick="showMenu()"></div>
+    <a href="" class="logo"><span>E</span>-<span>S</span>tore</a>
+    <nav class="navbar">
+        <a href="/index.html" class="active">home</a>
+        <a href="/assets/page/about/about.html">About</a>
+        <a href="/assets/page/shop/shop.html">Shop</a>
+        <a href="/assets/page/blog/blog.html">Blog</a>
+        <a href="assets/page/contact/contact.html">contact</a>
+    </nav>
+    <div class="icon">
+        <i class="fas fa-search" onclick="showbar()" id="search-btn"></i>
+        <div class="user-container" onclick="toggleUserMenu()">
+            <i class="fas fa-user"></i>
+            <span id="loggedInUser"></span>
+            <div class="user-menu" id="userMenu">
+                <a href="#" onclick="logout()">Logout</a>
+            </div>
+        </div>
+        <i class="ri-shopping-cart-line cart-icon"><a href="#"><span class="cart-count">0</span></a></i>
+    </div>
+    
+    <form action="" class="search-form">
+        <input type="search" id="search-bar" onkeyup="search()" placeholder="What you looking for...">
+        <label for="search-bar" class="fas fa-search"></label>
+    </form>
+</header>
 
 
 

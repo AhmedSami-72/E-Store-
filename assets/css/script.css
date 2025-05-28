@@ -1,6 +1,9 @@
-/* Google Fonts - Poppins */
+/* ===================== GLOBAL STYLES & RESET ===================== */
+
+/* Import Google Fonts */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:600&display=swap");
 
+/* Universal Reset */
 * {
   padding: 0;
   margin: 0;
@@ -9,55 +12,34 @@
   text-transform: capitalize;
   text-decoration: none;
   list-style: none;
-  text-decoration: none;
   transition: all 0.5s linear;
 }
 
-/*-----------------------------------*\
-    #RESET
-  \*-----------------------------------*/
-
-a {
-  text-decoration: none;
-}
-
-li {
-  list-style: none;
-}
-
-button {
-  background: none;
-  font: inherit;
-  border: none;
-  cursor: pointer;
-}
-
-ion-icon {
-  display: block;
-}
-
-/* /*-----------------------------------*\ */
-body {
-  color: var(--text-color);
-  background: var(--bg-color);
-}
-
-/* 1rem = 16px => 10px */
+/* Base HTML Styles */
 html {
   scroll-behavior: smooth;
-  font-size: 62.5%;
+  font-size: 62.5%; /* 1rem = 10px for easier calculations */
   overflow-x: hidden;
 }
 
-/* #CUSTOM PROPERTY */
+/* Body Defaults */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+
+/* أضف باقي العناصر بنفس الطريقة */
+
+/* ===================== GLOBAL VARIABLES (LIGHT MODE - DEFAULT) ===================== */
 :root {
-  /**
-     * colors
-     */
-  --bg-color: #f8fff8;
-  --text-color: #1a1a1a;
+  --bg-color: #ffffff;
+  --text-color: #0f172a;
   --main-color: #6b7280;
-  --other-color: #666666;
+  --other-color: #334155;
+  --box-color: #f1f1f1;
+  --section-bg: #fafafa;
+  --btn-color: #0080ff;
   --white: #fff;
   --black: #222;
   --pink: #f60091;
@@ -67,6 +49,7 @@ html {
   --grey-alt: #d1e2e9;
   --yellow: #ffd800;
   --green: #59b210;
+
   --spanish-gray: hsl(0, 0%, 60%);
   --sonic-silver: hsl(0, 0%, 47%);
   --eerie-black: hsl(0, 0%, 13%);
@@ -75,13 +58,11 @@ html {
   --bittersweet: hsl(0, 100%, 70%);
   --ocean-green: hsl(152, 51%, 52%);
   --cultured: hsl(0, 0%, 93%);
-  --white: hsl(0, 100%, 100%);
   --onyx: hsl(0, 0%, 27%);
+
   --big-font: 4rem;
   --h2-font: 2.5rem;
   --p-font: 1rem;
-
-  /* typography */
 
   --fs-1: 1.563rem;
   --fs-2: 1.375rem;
@@ -101,17 +82,60 @@ html {
   --weight-600: 600;
   --weight-700: 700;
 
-  /**
-     * border-radius
-     */
-
   --border-radius-md: 10px;
   --border-radius-sm: 5px;
 
-  /**
-     * transition 
-     */
   --transition-timing: 0.2s ease;
+}
+
+/* ===================== DARK MODE VARIABLES ===================== */
+body.dark-mode {
+  --bg-color: #0f172a;
+  --text-color: #ffffff;
+  --main-color: #e2e8f0;
+  --other-color: #94a3b8;
+  --box-color: #1e293b;
+  --section-bg: #1a1a2e;
+  --btn-color: #22d3ee;
+
+  --white: #1e293b;
+  --black: #f8fafc;
+  --pink: #ff69b4;
+  --grey: #cbd5e1;
+  --grey2: #94a3b8;
+  --blue: #38bdf8;
+  --grey-alt: #475569;
+  --yellow: #facc15;
+  --green: #4ade80;
+
+  --spanish-gray: hsl(0, 0%, 75%);
+  --sonic-silver: hsl(0, 0%, 60%);
+  --eerie-black: hsl(0, 0%, 100%);
+  --salmon-pink: hsl(353, 100%, 85%);
+  --sandy-brown: hsl(29, 90%, 75%);
+  --bittersweet: hsl(0, 100%, 80%);
+  --ocean-green: hsl(152, 51%, 62%);
+  --cultured: hsl(210, 25%, 25%);
+  --onyx: hsl(0, 0%, 85%);
+}
+/* ===================== ELEMENT RESETS ===================== */
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  background: none;
+  font: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+ion-icon {
+  display: block;
 }
 
 /*-----------------------------------*\
@@ -195,4 +219,183 @@ html {
 
 .dark-mode aside.cart.open{
     background-color: #1e1e2f !important;
+}
+
+
+/* ===================== SCROLL TO TOP BUTTON ===================== */
+#scroll-to-top-button {
+  display: none; /* Hidden by default */
+  position: fixed;
+  bottom: 0px;
+  transform: translate(0px, -180px);
+  z-index: 999;
+  right: 30px;
+  color: #179196;
+  font-size: 5rem;
+  border-radius: 50%;
+  opacity: 0.5;
+  transition: opacity 0.2s ease-in-out;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Hover state for scroll button */
+#scroll-to-top-button:hover {
+  opacity: 1;
+}
+
+
+/* ===================== HEADER SECTION ===================== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  padding: 1.5rem 5%;
+  transition: all 0.45s ease;
+  border-bottom: 1px solid #f7f9fb;
+}
+
+/* Sticky header when scrolling */
+header.sticky {
+  background: var(--section-bg);
+  padding: 14px 3%;
+}
+
+/* Logo styles */
+header .logo {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #55efc369;
+  font-family: "Patua One", cursive;
+  font-family: "Sigmar", cursive;
+  text-transform: capitalize;
+  transition: all 0.2s ease;
+}
+
+/* Logo hover effect */
+header .logo:hover {
+  letter-spacing: 1px;
+}
+
+/* Logo span color */
+header .logo span {
+  color: var(--blue);
+}
+
+/* Navigation links */
+header .navbar a {
+  color: #0f172a;
+  font-size: 1.5rem;
+  margin: 0 0.8rem;
+  padding: 10px 15px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+/* Active and hover state for nav links */
+.active,
+header .navbar a:hover {
+  color: var(--blue);
+  background-color: #55efc33d;
+  padding: 10px 20px;
+  letter-spacing: 1.5px;
+}
+
+/* Icons container */
+header .icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Individual icon styles */
+header .icon i {
+  font-size: 2rem;
+  color: rgb(0, 128, 255);
+  cursor: pointer;
+  transition: all 0.45s ease;
+  margin-right: 0.3rem;
+  border-radius: 50%;
+  padding: 12px 14px;
+}
+
+/* Shopping cart specific styles */
+header .icon i.ri-shopping-cart-line {
+  padding: 9px 12px;
+}
+
+/* Shopping cart counter */
+header .icon i.ri-shopping-cart-line span {
+  padding-left: 1px;
+  font-size: 1rem;
+}
+
+/* Icon hover effects */
+header .icon i:hover {
+  color: var(--blue);
+  transform: scale(0.9);
+  background-color: #55efc33d;
+}
+
+/* Search form styles */
+header .search-form {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #33333325;
+  display: flex;
+  align-items: center;
+  z-index: 1001;
+  padding: 1.5rem 2rem;
+  border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+/* Active search form */
+header .search-form.active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Search input field */
+header .search-form #search-bar {
+  width: 100%;
+  padding: 1rem;
+  color: #333;
+  font-size: 1.4rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+}
+
+/* Search label/button */
+header .search-form label {
+  color: #fff;
+  cursor: pointer;
+  font-size: 3rem;
+  margin-left: 1.5rem;
+}
+
+/* Search label hover */
+header .search-form label:hover {
+  color: var(--blue);
+}
+
+/* Mobile menu button (hidden by default) */
+#menu-bar {
+    color: var(--blue);
+    border: .1rem solid var(--blue);
+    border-radius: .5rem;
+    font-size: 3rem;
+    padding: .5rem 1.2rem;
+    cursor: pointer;
+    display: none;
 }
