@@ -34,3 +34,53 @@
     }
 }
 /* @media header section design */
+
+/* @media home section design */
+@media (max-width: 1700px) {
+
+    section {
+        padding: 80px 3% 70px;
+    }
+
+    .home {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 1410px) {
+    .row-text h6 {
+        margin-bottom: 5px;
+    }
+
+    .row-text h3 {
+        margin-bottom: 1rem;
+    }
+
+    .cta-text {
+        margin-left: 55px;
+    }
+
+    .home {
+        height: 90vh;
+    }
+}
+
+@media (max-width: 940px) {
+    .home {
+        grid-template-columns: 1fr;
+        text-align: center;
+        height: 117vh;
+    }
+
+    .home-img img {
+        width: 500px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .home-text {
+        padding-top: 50px;
+    }
+}
+
+/*// @media home section design //*/
