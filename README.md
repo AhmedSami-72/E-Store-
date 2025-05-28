@@ -1,4 +1,4 @@
-p<h1 align="center">🛍 E-STORE</h1>
+<h1 align="center">🛍 E-STORE</h1>
 <p align="center">
   A modern and fully responsive e-commerce website for shopping clothes, accessories, toys, and more.
   <br><br>
