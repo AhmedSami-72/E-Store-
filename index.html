@@ -22,87 +22,10 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/mediaQuery.css">
 </head>
-<!-- dark mode -->
+<body>
+    <!-- dark mode  -->
     <i class="bi bi-brightness-high-fill" id="scroll-to-top"></i>
-<!--// dark mode  //-->
-
-<!-- Header Section -->
-<header>
-    <!-- زر القائمة الجانبية (يظهر في الموبايل) -->
-    <div id="menu-bar" class="fas fa-bars" onclick="showmenu()"></div>
-    <!-- شعار الموقع -->
-    <a href="/index.html" class="logo"><span>E</span>-<span>S</span>tore</a>
-    <!-- قائمة الروابط الرئيسية -->
-    <nav class="navbar">
-        <a href="/index.html" class="active">Home</a>
-        <a href="/assets/page/about/about.html">About</a>
-        <a href="/assets/page/shop/shop.html">Shop</a>
-        <a href="/assets/page/blog/blog.html">Blog</a>
-        <a href="/assets/page/contact/contact.html">Contact</a>
-    </nav>
-    <!-- أيقونات التفاعل -->
-    <div class="icon">
-        <!-- البحث -->
-        <i class="fas fa-search" onclick="showbar()" id="search-btn" aria-label="Search"></i>
-        <!-- المستخدم -->
-        <i class="fas fa-user" onclick="showform()" aria-label="User Login"></i>
-        <!-- عربة التسوق -->
-        <a href="#" class="cart-icon" aria-label="Shopping Cart">
-            <i class="fas fa-shopping-cart"></i>
-            <!-- <span class="cart-count">0</span> -->
-        </a>
-    </div>
-    <!-- شريط البحث -->
-    <form action="" class="search-form">
-        <input type="search" id="search-bar" onkeyup="search()" placeholder="What are you looking for?">
-        <label for="search-bar" class="fas fa-search"></label>
-    </form>
-</header>
-<!-- //header section design// -->
-
-    <!-- aside open bar cart -->
-    <aside class="cart">
-        <h2>Shopping Cart</h2>
-        <ul>
-            <!-- Empty shopping cart -->
-        </ul>
-        <div class="total">
-            <span>Total:</span>
-            <span class="amount">$0</span>
-        </div>
-        <a href="/assets/page/sign up/signUp.html"><button class="done">Complete purchase</button></a>
-    </aside>
-    <!--// aside open bar cart //-->
-
-<!-- login-form -->
-<div class="login-form">
-        <i class="fas fa-times" id="form-close" onclick="hideform()"></i>
-        <form action="">
-            <h3>login</h3>
-            <input type="email" class="box" placeholder="Enter your email">
-            <input type="password" class="box" placeholder="Enter your password">
-            <a href="assets/page/sign up/index.html"><input type="submit" value="login now" class="btn"></a>
-            <input type="checkbox" id="remember">
-            <label for="remmember"> remember me</label>
-            <p>forget password? <a href="index.html">click here</a></p>
-            <p>don't have account? <a href="assets/page/sign up/index.html">sign up</a></p>
-        </form>
-    </div>
-<!-- //login-form// -->
-
-    <!----home section design---->
-    <section class="home">
-        <div class="home-text">
-            <h4>In this season, find the best 🔥</h4>
-            <h1>Exclusive collection for everyone</h1>
-            <a href="#" class="btn">Explore now</a>
-        </div>
-
-        <div class="home-img" data-aos="zoom-out-down">
-            <img src="assets/images/New folder (2)/3.png">
-        </div>
-    </section>
-    <!----// home section design //---->
+    <!--// dark mode  //-->
 
 
 
@@ -118,21 +41,21 @@
 
 
 
- <!-- aos -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <!--
+    - ionIcon link
+    -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- bootstrap -->
+    <script src="vendor/bootstrap/js/bootstrap.js"></script>
+    <!-- aos -->
     <script src="vendor/aos/aos.js"></script>
     <script>
         AOS.init({
             duration: 1500,
         });
     </script>
-<!--
-    - ionIcon link
-    -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <!--- ionIcon link -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <!-- Custom Script -->
     <script src="assets/js/main.js"></script>
 </body>
