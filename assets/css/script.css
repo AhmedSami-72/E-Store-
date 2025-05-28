@@ -399,3 +399,254 @@ header .search-form label:hover {
     cursor: pointer;
     display: none;
 }
+
+
+
+/* ===================== LOGIN FORM SECTION ===================== */
+/* Login form container - initially hidden */
+.login-form {
+  position: fixed;
+  top: -120%;
+  left: 0;
+  min-height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Active state for login form (when visible) */
+.login-form.active {
+  top: 0;
+}
+
+/* Close button for the form */
+.login-form #form-close {
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  font-size: 3.5rem;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Close button hover effect */
+.login-form #form-close:hover {
+  transform: rotate(90deg) scale(1.1);
+  color: #ff4757;
+}
+
+/* Form container styles */
+.login-form form {
+  margin: 2rem;
+  padding: 2.5rem;
+  border-radius: 10px;
+  background: #fff;
+  width: 45rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative top border for form */
+.login-form form::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #4070f4, #4cd137);
+}
+
+/* Form heading */
+.login-form form h3 {
+  font-size: 2.5rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+
+/* Decorative underline for heading */
+.login-form form h3::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: #4070f4;
+}
+
+/* Input fields */
+.login-form form .box {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 1rem 0;
+  transition: all 0.3s ease;
+}
+
+/* Input field focus state */
+.login-form form .box:focus {
+  border-color: #4070f4;
+  box-shadow: 0 0 0 3px rgba(64, 112, 244, 0.2);
+}
+
+/* Submit button */
+.login-form form .btn {
+  display: block;
+  width: 100%;
+  padding: 1.4rem;
+  margin: 2rem 0 1rem;
+  background: #4070f4;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.7rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Submit button hover */
+.login-form form .btn:hover {
+  background: #3056d3;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(48, 86, 211, 0.3);
+}
+
+/* Remember me checkbox */
+.login-form form #remember {
+  margin-right: 0.8rem;
+  cursor: pointer;
+}
+
+/* Form labels */
+.login-form form label {
+  font-size: 1.5rem;
+  color: #666;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Form footer text */
+.login-form form p {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #666;
+  margin: 1.5rem 0;
+}
+
+/* Links in form footer */
+.login-form form p a {
+  color: #4070f4;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+/* Link hover state */
+.login-form form p a:hover {
+  color: #3056d3;
+  text-decoration: underline;
+}
+
+/* ===================== USER MANAGEMENT SECTION ===================== */
+/* Logout button container */
+#logoutBtn {
+  display: none;
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #eee;
+}
+
+/* Logout button styles */
+#logoutBtn .btn {
+  background: #ff4757;
+}
+
+/* Logout button hover */
+#logoutBtn .btn:hover {
+  background: #e84118;
+  box-shadow: 0 5px 15px rgba(232, 65, 24, 0.3);
+}
+
+/* Logged in username display */
+#loggedInUser {
+  display: none;
+  margin-left: -8px;
+  color: #51ff01c5;
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  vertical-align: middle;
+}
+
+/* Username hover effect */
+#loggedInUser:hover {
+  color: #4070f4;
+  transform: translateX(5px);
+}
+
+/* User container (dropdown parent) */
+.user-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+/* User container hover */
+.user-container:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* User dropdown menu */
+.user-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  width: 120px;
+  display: none;
+  z-index: 1000;
+}
+
+/* Active dropdown menu */
+.user-menu.active {
+  display: block;
+}
+
+/* Dropdown menu items */
+.user-menu a {
+  display: block;
+  padding: 8px 15px;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Dropdown menu item hover */
+.user-menu a:hover {
+  background: #f5f5f5;
+  color: #4070f4;
+}
