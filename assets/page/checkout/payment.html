@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة الدفع الآمن</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* سيتم إضافة CSS هنا */
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .card-preview {
+            flex: 1;
+            min-width: 300px;
+            perspective: 1000px;
+        }
+        
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 220px;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+        
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .card-front {
+            background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+            color: white;
+        }
+        
+        .card-back {
+            background: linear-gradient(135deg, #868f96, #596164);
+            color: white;
+            transform: rotateY(180deg);
+        }
+        
+        .card-logo {
+            display: flex;
+            justify-content: flex-end;
+            font-size: 24px;
+        }
+        
+        .card-number {
+            font-size: 22px;
+            letter-spacing: 2px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .card-details {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .card-holder, .card-expiry {
+            font-size: 14px;
+        }
+        
+        .card-expiry {
+            text-align: left;
+        }
+        
+        .card-cvv {
+            background: white;
+            color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 40px;
+            text-align: right;
+            font-family: monospace;
+            font-size: 18px;
+        }
+        
+        .payment-form {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .payment-form h2 {
+            margin-bottom: 20px;
+            color: #3a7bd5;
+            font-weight: 700;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #555;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: border 0.3s;
+        }
+        
+        .form-control:focus {
+            border-color: #3a7bd5;
+            outline: none;
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .form-row .form-group {
+            flex: 1;
+        }
+        
+        .btn {
+            background: #3a7bd5;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background: #2c5fb3;
+        }
+        
+        .card-icons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .card-icon {
+            width: 50px;
+            height: 30px;
+            background: #f0f0f0;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+        }
+        
+        .secure-payment {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+            color: #777;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .card-preview, .payment-form {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card-preview">
+            <div class="card-inner" id="cardFlip">
+                <div class="card-front">
+                    <div class="card-logo">
+                        <i class="fab fa-cc-visa"></i>
+                    </div>
+                    <div class="card-number" id="cardNumberDisplay">•••• •••• •••• ••••</div>
+                    <div class="card-details">
+                        <div class="card-holder">
+                            <div>حامل البطاقة</div>
+                            <div id="cardNameDisplay">الاسم الكامل</div>
+                        </div>
+                        <div class="card-expiry">
+                            <div>تاريخ الانتهاء</div>
+                            <div id="cardExpiryDisplay">••/••</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <div class="card-cvv" id="cardCvvDisplay">•••</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="payment-form">
+            <h2>الدفع الآمن</h2>
+            
+            <form id="paymentForm">
+                <div class="form-group">
+                    <label for="cardNumber">رقم البطاقة</label>
+                    <input type="text" id="cardNumber" class="form-control" placeholder="1234 5678 9012 3456" maxlength="19">
+                </div>
+                
+                <div class="form-group">
+                    <label for="cardName">اسم حامل البطاقة</label>
+                    <input type="text" id="cardName" class="form-control" placeholder="الاسم كما هو مدون على البطاقة">
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cardExpiry">تاريخ الانتهاء</label>
+                        <input type="text" id="cardExpiry" class="form-control" placeholder="MM/YY" maxlength="5">
+                    </div>
+                    <div class="form-group">
+                        <label for="cardCvv">CVV</label>
+                        <input type="text" id="cardCvv" class="form-control" placeholder="•••" maxlength="3">
+                    </div>
+                </div>
+                
+                <a href="Checkout.html"  class="btn">تأكيد الدفع</a>
+                
+                <div class="card-icons">
+                    <div class="card-icon"><i class="fab fa-cc-visa"></i></div>
+                    <div class="card-icon"><i class="fab fa-cc-mastercard"></i></div>
+                    <div class="card-icon"><i class="fab fa-cc-amex"></i></div>
+                    <div class="card-icon"><i class="fab fa-cc-discover"></i></div>
+                </div>
+                
+                <div class="secure-payment">
+                    <i class="fas fa-lock"></i>
+                    <span>دفع آمن ومشفّر</span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript للتفاعلات
+        document.addEventListener('DOMContentLoaded', function() {
+            // عناصر DOM
+            const cardNumberInput = document.getElementById('cardNumber');
+            const cardNameInput = document.getElementById('cardName');
+            const cardExpiryInput = document.getElementById('cardExpiry');
+            const cardCvvInput = document.getElementById('cardCvv');
+            const cardFlip = document.getElementById('cardFlip');
+            
+            const cardNumberDisplay = document.getElementById('cardNumberDisplay');
+            const cardNameDisplay = document.getElementById('cardNameDisplay');
+            const cardExpiryDisplay = document.getElementById('cardExpiryDisplay');
+            const cardCvvDisplay = document.getElementById('cardCvvDisplay');
+            
+            // تنسيق رقم البطاقة
+            cardNumberInput.addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\s+/g, '').replace(/[^0-9]/gi, '');
+                let formatted = '';
+                
+                for (let i = 0; i < value.length; i++) {
+                    if (i > 0 && i % 4 === 0) {
+                        formatted += ' ';
+                    }
+                    formatted += value[i];
+                }
+                
+                e.target.value = formatted;
+                cardNumberDisplay.textContent = formatted || '•••• •••• •••• ••••';
+                
+                // تغيير لون البطاقة حسب النوع
+                const firstDigit = value.charAt(0);
+                if (firstDigit === '4') {
+                    document.querySelector('.card-front').style.background = 'linear-gradient(135deg, #3a7bd5, #00d2ff)';
+                    document.querySelector('.card-logo i').className = 'fab fa-cc-visa';
+                } else if (firstDigit === '5') {
+                    document.querySelector('.card-front').style.background = 'linear-gradient(135deg, #f46b45, #eea849)';
+                    document.querySelector('.card-logo i').className = 'fab fa-cc-mastercard';
+                } else if (firstDigit === '3') {
+                    document.querySelector('.card-front').style.background = 'linear-gradient(135deg, #007bb5, #004d73)';
+                    document.querySelector('.card-logo i').className = 'fab fa-cc-amex';
+                } else {
+                    document.querySelector('.card-front').style.background = 'linear-gradient(135deg, #3a7bd5, #00d2ff)';
+                    document.querySelector('.card-logo i').className = 'fab fa-cc-visa';
+                }
+            });
+            
+            // تحديث اسم حامل البطاقة
+            cardNameInput.addEventListener('input', function(e) {
+                cardNameDisplay.textContent = e.target.value || 'الاسم الكامل';
+            });
+            
+            // تنسيق تاريخ الانتهاء
+            cardExpiryInput.addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, '');
+                
+                if (value.length > 2) {
+                    value = value.substring(0, 2) + '/' + value.substring(2, 4);
+                }
+                
+                e.target.value = value;
+                cardExpiryDisplay.textContent = value || '••/••';
+            });
+            
+            // إدارة CVV وتقليب البطاقة
+            cardCvvInput.addEventListener('focus', function() {
+                cardFlip.style.transform = 'rotateY(180deg)';
+            });
+            
+            cardCvvInput.addEventListener('blur', function() {
+                cardFlip.style.transform = 'rotateY(0deg)';
+            });
+            
+            cardCvvInput.addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, '');
+                e.target.value = value;
+                cardCvvDisplay.textContent = value || '•••';
+            });
+            
+            // منع إدخال أحرف في الحقول الرقمية
+            cardNumberInput.addEventListener('keypress', function(e) {
+                if (isNaN(parseInt(e.key, 10))) {
+                    e.preventDefault();
+                }
+            });
+            
+            cardExpiryInput.addEventListener('keypress', function(e) {
+                if (e.key !== '/' && isNaN(parseInt(e.key, 10))) {
+                    e.preventDefault();
+                }
+            });
+            
+            cardCvvInput.addEventListener('keypress', function(e) {
+                if (isNaN(parseInt(e.key, 10))) {
+                    e.preventDefault();
+                }
+            });
+            
+            // معالجة إرسال النموذج
+            document.getElementById('paymentForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // هنا يمكنك إضافة التحقق من الصحة وإرسال البيانات
+                alert('تمت عملية الدفع بنجاح!');
+                this.reset();
+                cardNumberDisplay.textContent = '•••• •••• •••• ••••';
+                cardNameDisplay.textContent = 'الاسم الكامل';
+                cardExpiryDisplay.textContent = '••/••';
+                cardCvvDisplay.textContent = '•••';
+                document.querySelector('.card-front').style.background = 'linear-gradient(135deg, #3a7bd5, #00d2ff)';
+                document.querySelector('.card-logo i').className = 'fab fa-cc-visa';
+            });
+        });
+    </script>
+</body>
+</html>
