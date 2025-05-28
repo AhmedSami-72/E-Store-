@@ -1,8 +1,8 @@
-<h1 align="center">🛍 E-STORE</h1>
+p<h1 align="center">🛍 E-STORE</h1>
 <p align="center">
-  A modern and responsive e-commerce website for selling clothes, toys, accessories, and more.
-  <br>
-  <strong>Light & Dark Mode | Shopping Cart | Login System | Fully Responsive</strong>
+  A modern and fully responsive e-commerce website for shopping clothes, accessories, toys, and more.
+  <br><br>
+  <strong>Light & Dark Mode | Shopping Cart | Login System | Animated UI | AOS | Local Storage</strong>
 </p>
 
 <p align="center">
@@ -19,56 +19,99 @@
 
 ## 🎬 Demo
 
-<!-- Replace YOUR_VIDEO_LINK below with the actual link -->
+<!-- Replace the placeholders below with your actual video link and YouTube ID -->
 [![Watch Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg)](YOUR_VIDEO_LINK)
 
-> 📌 Click the image above to watch the full demo video of the project.
+> 🖱 Click the image to watch the full demo video explaining the features of E-STORE.
 
 ---
 
 ## ✨ Features
 
-- 🌗 Toggle between Light and Dark Modes
-- 📱 Fully responsive on all screen sizes
-- 🛒 Add to Cart system with auto price calculation
-- ❌ Remove products from cart and update quantity
-- 💳 Complete checkout page with payment form
-- 👤 Login / Signup system using Local Storage
-- 🔍 Live search functionality for products
-- 👁 Quick product view (hover image change + view button)
-- 📰 Blog page with email subscription
-- 📧 Contact page with email form and Google Map
-- ⏳ Preloader animation at launch
-- 📩 Email subscription pop-up on homepage
-- ✨ Smooth scroll animations using AOS library
+Here are the main features that make *E-STORE* interactive and modern:
+
+- 🌗 *Light/Dark Mode* — Toggle between light and dark themes with smooth transitions.
+- 📱 *Responsive Design* — Looks great on desktop, tablet, and mobile.
+- 🛒 *Shopping Cart System*:
+  - Add products to cart
+  - Update quantity
+  - Auto-calculated total price
+  - Remove items
+- 💳 *Checkout Page* — Simulated payment form with card and user data.
+- 👤 *Authentication (Local Storage)*:
+  - Sign up with username, email, and password
+  - Login with saved data
+  - Welcome message after login
+- 🔍 *Live Product Search* — Find any item by typing its name.
+- 👁 *Quick View* — Hover over product image to see alternative views and quick action icons.
+- 📰 *Blog Page* — Articles related to the store, popular blogs, and an email subscription field.
+- 📧 *Contact Page* — Google Maps + contact form for customer messages.
+- ⏳ *Preloader* — Smooth loading animation before homepage loads.
+- 📩 *Popup Subscription* — Email signup modal appears on homepage.
+- ✨ *AOS Animation* — Smooth scroll animations throughout the site.
 
 ---
 
 ## 📄 Pages
 
-- *Home Page:* Includes preloader, email pop-up, animations, and theme switcher.
-- *Shop Page:* Product listing with hover effects, quick view, and add to cart.
-- *Product Page:* View full product details and change quantity before adding to cart.
-- *Cart Page:* Manage cart items, update quantities, remove products.
-- *Checkout Page:* Payment form for completing the order.
-- *Login / Signup Pages:* Local Storage-based authentication. Username is shown after login.
-- *Blog Page:* Articles with subscription form.
-- *Contact Page:* Contact form with name, email, message + Google Maps.
+### 🔹 Home Page
+- Preloader animation at start.
+- Email subscription popup.
+- Hero section with call-to-action.
+- Featured products.
+- Category highlights.
+- Theme switcher.
+- AOS animations.
+
+### 🔹 Shop Page
+- List of all products.
+- Hover effects to show extra product images.
+- "View" (eye icon) opens full product page.
+- "Add to Cart" button directly from the card.
+
+### 🔹 Product Page
+- Full-size images of the selected product.
+- Ability to choose quantity.
+- Detailed product description and price.
+- Add to cart from this page as well.
+
+### 🔹 Cart Page
+- View all added products.
+- Update quantity or remove items.
+- View subtotal and proceed to checkout.
+
+### 🔹 Checkout Page
+- Simple form to simulate payment.
+- Card number, name, and expiration.
+- Confirm purchase button (front-end only).
+
+### 🔹 Login / Signup Pages
+- Forms for new users and returning users.
+- Stored in localStorage.
+- After login, homepage shows user’s name.
+
+### 🔹 Blog Page
+- Featured and recent articles.
+- Subscription form to get email updates.
+
+### 🔹 Contact Page
+- Form for name, email, and message.
+- Integrated with Google Maps.
 
 ---
 
 ## 🧰 Technologies Used
 
-| Technology     | Description                     |
-|----------------|---------------------------------|
-| HTML5          | Page structure                  |
-| CSS3           | Styling and layout              |
-| JavaScript     | Functionality and logic         |
-| Bootstrap 5    | Responsive grid and components  |
-| Font Awesome   | Icon library                    |
-| ION Icons      | Additional icons                |
-| AOS Library    | Scroll-based animations         |
-| Local Storage  | Save user data and sessions     |
+| Technology     | Usage                                   |
+|----------------|------------------------------------------|
+| *HTML5*      | Page structure and content layout        |
+| *CSS3*       | Custom styling and responsive design     |
+| *JavaScript* | Logic for cart, auth, search, toggles    |
+| *Bootstrap 5*| Grid system and ready-made components    |
+| *Font Awesome* | Icons for buttons and UI elements      |
+| *ION Icons*  | Extra icon styles                       |
+| *AOS (Animate on Scroll)* | Scroll-triggered animations |
+| *Local Storage* | Store user data and sessions         |
 
 ---
 
@@ -76,12 +119,12 @@
 
 ```bash
 e-store/
-├── index.html
+├── index.html                  # Home page
 ├── css/
-│   └── style.css
+│   └── style.css               # All custom styles
 ├── js/
-│   └── main.js
-├── images/
+│   └── main.js                 # All JavaScript logic
+├── images/                     # Product and UI images
 ├── pages/
 │   ├── shop.html
 │   ├── product.html
@@ -91,4 +134,4 @@ e-store/
 │   ├── contact.html
 │   ├── login.html
 │   └── signup.html
-└── README.md
+└── README.md                   # Project documentation
