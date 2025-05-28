@@ -138,88 +138,17 @@ ion-icon {
   display: block;
 }
 
-/*-----------------------------------*\
 
 
-/* زرار التبديل */
-#scroll-to-top {
-  position: fixed;
-  bottom: 0px;
-  transform: translate(0px, -180px);
-  left: 0;
-  font-size: 1.8rem;
-  z-index: 1111;
-  margin-left: 20px;
-  background-color: #1e1e2f; /* لون غامق مناسب للوضع الليلي */
-  color: #ffffff;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 13px 14px;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  border-radius: 50%;
-  opacity: 0.7;
-  transition: all 0.3s ease-in-out;
-}
-
-#scroll-to-top:hover {
-  opacity: 1;
-  background-color: #34344e;
-}
-
-.light {
-  color: white;
-}
 
 
-/*-----------------------------------*\
 
-/*  dark-mode الوضع الليلي */
-.dark-mode {
-  background-color: #121212 !important;
-  color: #e0e0e0 !important;
-}
 
-.dark-mode header {
-  background-color: #1e1e2f !important;
-}
 
-.dark-mode .footer-bottom {
-  background-color: #1b1b1b;
-  color: #888;
-}
 
-.dark-mode a {
-  color: #88ccff;
-}
 
-.dark-mode a:hover {
-  color: #ffffff;
-}
-.dark-mode section.home {
-  background-image: url(/assets/images/background-dark.svg);
-  background-color: #1e1e2f;
-}
 
-.dark-mode nav a{
-    color: #88ccff !important;
-}
 
-.dark-mode i {
-    color: #38BDF8 !important;
-}
-
-.dark-mode i#scroll-to-top{
-        background-color:#88cbffb0;
-
-}
-
-.dark-mode aside.cart.open{
-    background-color: #1e1e2f !important;
-}
 
 
 /* ===================== SCROLL TO TOP BUTTON ===================== */
@@ -245,7 +174,6 @@ ion-icon {
 #scroll-to-top-button:hover {
   opacity: 1;
 }
-
 
 /* ===================== HEADER SECTION ===================== */
 header {
@@ -279,127 +207,6 @@ header .logo {
   text-transform: capitalize;
   transition: all 0.2s ease;
 }
-
-/* Logo hover effect */
-header .logo:hover {
-  letter-spacing: 1px;
-}
-
-/* Logo span color */
-header .logo span {
-  color: var(--blue);
-}
-
-/* Navigation links */
-header .navbar a {
-  color: #0f172a;
-  font-size: 1.5rem;
-  margin: 0 0.8rem;
-  padding: 10px 15px;
-  border-radius: 30px;
-  transition: all 0.3s ease;
-}
-
-/* Active and hover state for nav links */
-.active,
-header .navbar a:hover {
-  color: var(--blue);
-  background-color: #55efc33d;
-  padding: 10px 20px;
-  letter-spacing: 1.5px;
-}
-
-/* Icons container */
-header .icon {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Individual icon styles */
-header .icon i {
-  font-size: 2rem;
-  color: rgb(0, 128, 255);
-  cursor: pointer;
-  transition: all 0.45s ease;
-  margin-right: 0.3rem;
-  border-radius: 50%;
-  padding: 12px 14px;
-}
-
-/* Shopping cart specific styles */
-header .icon i.ri-shopping-cart-line {
-  padding: 9px 12px;
-}
-
-/* Shopping cart counter */
-header .icon i.ri-shopping-cart-line span {
-  padding-left: 1px;
-  font-size: 1rem;
-}
-
-/* Icon hover effects */
-header .icon i:hover {
-  color: var(--blue);
-  transform: scale(0.9);
-  background-color: #55efc33d;
-}
-
-/* Search form styles */
-header .search-form {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background: #33333325;
-  display: flex;
-  align-items: center;
-  z-index: 1001;
-  padding: 1.5rem 2rem;
-  border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
-  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-}
-
-/* Active search form */
-header .search-form.active {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-}
-
-/* Search input field */
-header .search-form #search-bar {
-  width: 100%;
-  padding: 1rem;
-  color: #333;
-  font-size: 1.4rem;
-  border-radius: 0.5rem;
-  border: none;
-  outline: none;
-}
-
-/* Search label/button */
-header .search-form label {
-  color: #fff;
-  cursor: pointer;
-  font-size: 3rem;
-  margin-left: 1.5rem;
-}
-
-/* Search label hover */
-header .search-form label:hover {
-  color: var(--blue);
-}
-
-/* Mobile menu button (hidden by default) */
-#menu-bar {
-    color: var(--blue);
-    border: .1rem solid var(--blue);
-    border-radius: .5rem;
-    font-size: 3rem;
-    padding: .5rem 1.2rem;
-    cursor: pointer;
-    display: none;
-}
-
 
 
 /* ===================== LOGIN FORM SECTION ===================== */
@@ -649,4 +456,594 @@ header .search-form label:hover {
 .user-menu a:hover {
   background: #f5f5f5;
   color: #4070f4;
+}
+
+/* ========== أنماط مستخدم تسجيل الدخول ========== */
+/* عنصر المستخدم المسجل (مخفي بشكل افتراضي) */
+#loggedInUser {
+  display: none;
+  margin-left: -8px;
+  color: #51ff01c5;
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  vertical-align: middle;
+}
+
+#loggedInUser:hover {
+  color: #4070f4;
+  transform: translateX(5px);
+}
+
+/* حاوية المستخدم العلوية */
+.user-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.user-container:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* قائمة المستخدم المنسدلة */
+.user-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  width: 120px;
+  display: none;
+  z-index: 1000;
+}
+
+.user-menu.active {
+  display: block;
+}
+
+.user-menu a {
+  display: block;
+  padding: 8px 15px;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.user-menu a:hover {
+  background: #f5f5f5;
+  color: #4070f4;
+}
+
+/* ==========  نموذج تسجيل الدخول ========== */
+.login-form {
+  position: fixed;
+  top: -120%;
+  left: 0;
+  min-height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.login-form.active {
+  top: 0;
+}
+
+/* ==========  الصفحة الرئيسية ========== */
+.home {
+  height: 100vh;
+  width: 100%;
+  background-image: url(/assets/images/background.svg);
+  background-color: #e3ffe6;
+  background-size: cover;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.home-img img {
+  width: 100%;
+  height: auto;
+  transition: all 1s ease;
+}
+
+.home-img img:hover {
+  transform: translate(0, -10px);
+}
+
+.home-text h4 {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--other-color);
+}
+
+.home-text h1 {
+  font-size: var(--big-font);
+  color: var(--text-color);
+  line-height: 1.2;
+  margin: 25px 0 45px;
+}
+
+/*  الأزرار العامة */
+.btn {
+  display: inline-block;
+  padding: 16px 30px;
+  background: var(--text-color);
+  color: var(--bg-color);
+  font-size: 15px;
+  letter-spacing: 1px;
+  border-radius: 30px;
+  transition: all 0.45s ease;
+}
+
+.btn:hover {
+  letter-spacing: 2px;
+  opacity: 0.8;
+}
+
+/* ========== (Footer) ========== */
+/* التنسيق الأساسي للتذييل */
+footer {
+  background: #afb2b6cc;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+/* محتوى footer الرئيسي */
+footer .content {
+  max-width: 1250px;
+  margin: auto;
+  padding: 30px 40px 40px 40px;
+}
+
+/* الجزء العلوي من footer (الشعار وروابط التواصل) */
+footer .content .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.content .top .logo-details {
+  color: #fff;
+  font-size: 30px;
+}
+
+/* أيقونات وسائل التواصل الاجتماعي */
+.content .top .media-icons {
+  display: flex;
+}
+
+.content .top .media-icons a {
+  height: 40px;
+  width: 40px;
+  margin: 0 8px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  font-size: 17px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+
+/* ألوان مختلفة لكل أيقونة */
+.top .media-icons a:nth-child(1) {
+  background: #4267b2;
+} /* Facebook */
+.top .media-icons a:nth-child(2) {
+  background: #1da1f2;
+} /* Twitter */
+.top .media-icons a:nth-child(3) {
+  background: #e1306c;
+} /* Instagram */
+.top .media-icons a:nth-child(4) {
+  background: #0077b5;
+} /* LinkedIn */
+.top .media-icons a:nth-child(5) {
+  background: #ff0000;
+} /* YouTube */
+
+/* تأثيرات hover على أيقونات التواصل */
+.top .media-icons a:hover {
+  color: inherit;
+  background: #fff;
+}
+
+/* صناديق الروابط في footer */
+footer .content .link-boxes {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .content .link-boxes .box {
+  width: calc(100% / 5 - 10px);
+}
+
+/* عناوين صناديق الروابط */
+.content .link-boxes .box .link_name {
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.link-boxes .box .link_name::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 35px;
+  background: #2f81ce;
+}
+
+/* روابط footer */
+.content .link-boxes .box li {
+  margin: 6px 0;
+  list-style: none;
+}
+
+.content .link-boxes .box li a {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: all 0.4s ease;
+}
+
+.content .link-boxes .box li a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* صندوق الإشتراك في النشرة البريدية */
+.link-boxes .input-box input {
+  height: 40px;
+  width: calc(100% + 55px);
+  outline: none;
+  border: 2px solid #afafb6;
+  background: white;
+  border-radius: 4px;
+  padding: 0 15px;
+  font-size: 15px;
+  color: #333;
+  margin-top: 5px;
+}
+
+.link-boxes .input-box input::placeholder {
+  color: #afafb6;
+  font-size: 16px;
+}
+
+/* زر الإشتراك */
+.link-boxes .input-box input[type="button"] {
+  background: #0080ff;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 4px 0;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.input-box input[type="button"]:hover {
+  opacity: 0.7;
+}
+
+/* الجزء السفلي من footer (حقوق النشر) */
+footer .bottom-details {
+  width: 100%;
+  background: #ffffffbb;
+}
+
+.bottom-details .bottom_text {
+  max-width: 1250px;
+  margin: auto;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom-details .bottom_text span,
+.bottom-details .bottom_text a {
+  font-size: 14px;
+  font-weight: 300;
+  color: #333;
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.bottom-details .bottom_text a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* أنماط وسائل الدفع */
+.foot {
+  width: 300px;
+  margin: 20px auto 0px auto;
+}
+
+.payment-img {
+  max-width: 335px;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+.copyright {
+  color: var(--sonic-silver);
+  font-size: 1rem;
+  font-weight: var(--weight-500);
+  text-transform: capitalize;
+  letter-spacing: 1.2px;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===================== SCROLL TO TOP BUTTON ===================== */
+/* ========== أنماط إضافية ========== */
+/* زر العودة للأعلى */
+#scroll-to-top {
+  position: fixed;
+  bottom: 0px;
+  transform: translate(0px, -180px);
+  left: 0;
+  font-size: 1.8rem;
+  z-index: 1111;
+  margin-left: 20px;
+  background-color: #1e1e2f;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  padding: 13px 14px;
+  opacity: 0.7;
+  transition: all 0.3s ease-in-out;
+}
+
+#scroll-to-top:hover {
+  opacity: 1;
+  background-color: #34344e;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* أنماط الوضع الليلي */
+.dark-mode {
+  background-color: #121212 !important;
+  color: #e0e0e0 !important;
+}
+
+.dark-mode header {
+  background-color: #1e1e2f !important;
+}
+
+.dark-mode .footer-bottom {
+  background-color: #1b1b1b;
+  color: #888;
+}
+
+.dark-mode a {
+  color: #88ccff;
+}
+
+.dark-mode a:hover {
+  color: #ffffff;
+}
+.dark-mode section.home {
+  background-image: url(/assets/images/background-dark.svg);
+  background-color: #1e1e2f;
+}
+
+.dark-mode nav a{
+    color: #88ccff !important;
+}
+
+.dark-mode i {
+    color: #38BDF8 !important;
+}
+
+.dark-mode i#scroll-to-top{
+        background-color:#88cbffb0;
+
+}
+
+.dark-mode aside.cart.open{
+    background-color: #1e1e2f !important;
+}
+
+/* Logo hover effect */
+header .logo:hover {
+  letter-spacing: 1px;
+}
+
+/* Logo span color */
+header .logo span {
+  color: var(--blue);
+}
+
+/* Navigation links */
+header .navbar a {
+  color: #0f172a;
+  font-size: 1.5rem;
+  margin: 0 0.8rem;
+  padding: 10px 15px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+/* Active and hover state for nav links */
+.active,
+header .navbar a:hover {
+  color: var(--blue);
+  background-color: #55efc33d;
+  padding: 10px 20px;
+  letter-spacing: 1.5px;
+}
+
+/* Icons container */
+header .icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Individual icon styles */
+header .icon i {
+  font-size: 2rem;
+  color: rgb(0, 128, 255);
+  cursor: pointer;
+  transition: all 0.45s ease;
+  margin-right: 0.3rem;
+  border-radius: 50%;
+  padding: 12px 14px;
+}
+
+/* Shopping cart specific styles */
+header .icon i.ri-shopping-cart-line {
+  padding: 9px 12px;
+}
+
+/* Shopping cart counter */
+header .icon i.ri-shopping-cart-line span {
+  padding-left: 1px;
+  font-size: 1rem;
+}
+
+/* Icon hover effects */
+header .icon i:hover {
+  color: var(--blue);
+  transform: scale(0.9);
+  background-color: #55efc33d;
+}
+
+/* Search form styles */
+header .search-form {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #33333325;
+  display: flex;
+  align-items: center;
+  z-index: 1001;
+  padding: 1.5rem 2rem;
+  border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+/* Active search form */
+header .search-form.active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Search input field */
+header .search-form #search-bar {
+  width: 100%;
+  padding: 1rem;
+  color: #333;
+  font-size: 1.4rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+}
+
+/* Search label/button */
+header .search-form label {
+  color: #fff;
+  cursor: pointer;
+  font-size: 3rem;
+  margin-left: 1.5rem;
+}
+
+/* Search label hover */
+header .search-form label:hover {
+  color: var(--blue);
+}
+
+/* Mobile menu button (hidden by default) */
+#menu-bar {
+    color: var(--blue);
+    border: .1rem solid var(--blue);
+    border-radius: .5rem;
+    font-size: 3rem;
+    padding: .5rem 1.2rem;
+    cursor: pointer;
+    display: none;
 }
