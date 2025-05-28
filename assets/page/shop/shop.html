@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/logo/logo.png" type="image/x-icon" />
+    <title>E-Store</title>
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <!-- aos -->
+    <link rel="stylesheet" href="vendor/aos/aos.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- StyleSheet -->
+    <link rel="stylesheet" href="/assets/css/script.css">
+    <link rel="stylesheet" href="/assets/css/style.css">    
+    <link rel="stylesheet" href="/assets/css/mediaQuery.css">
+</head>
+
+<body>
+
+    <!-- dark mode  -->
+    <i class="bi bi-brightness-high-fill" id="scroll-to-top"></i>
+    <!--// dark mode  //-->
+
+    <!-- scroll -->
+    <i class="fa-solid fa-circle-up" id="scroll-to-top-button"></i>
+    <!--// scroll //-->
+
+    <!-- --header section design---->
+<header>
+    <div id="menu-bar" class="fas fa-bars" onclick="showMenu()"></div>
+    <a href="" class="logo"><span>E</span>-<span>S</span>tore</a>
+    <nav class="navbar">
+        <a href="/index.html" >home</a>
+        <a href="/assets/page/about/about.html">About</a>
+        <a href="/assets/page/shop/shop.html" class="active">Shop</a>
+        <a href="/assets/page/blog/blog.html">Blog</a>
+        <a href="/assets/page/contact/contact.html">contact</a>
+    </nav>
+    <div class="icon">
+        <i class="fas fa-search" onclick="showbar()" id="search-btn"></i>
+        <div class="user-container" onclick="toggleUserMenu()">
+            <i class="fas fa-user"></i>
+            <span id="loggedInUser"></span>
+            <div class="user-menu" id="userMenu">
+                <a href="#" onclick="logout()">Logout</a>
+            </div>
+        </div>
+        <i class="ri-shopping-cart-line cart-icon"><a href="#"><span class="cart-count">0</span></a></i>
+    </div>
+    
+    <form action="" class="search-form">
+        <input type="search" id="search-bar" onkeyup="search()" placeholder="What you looking for...">
+        <label for="search-bar" class="fas fa-search"></label>
+    </form>
+</header>
+
+<!-- Login Form -->
+<div class="login-form" id="loginFormContainer">
+    <i class="fas fa-times" id="form-close" onclick="hideLoginForm()"></i>
+    <form id="loginForm">
+        <h3>login</h3>
+        <input type="email" id="loginEmail" class="box" placeholder="Enter your email" required autocomplete="username">
+        <input type="password" id="loginPassword" class="box" placeholder="Enter your password" required autocomplete="current-password">
+        <input type="submit" value="login now" class="btn">
+        <div class="remember-me">
+            <input type="checkbox" id="remember">
+            <label for="remember">remember me</label>
+        </div>
+        <p>forget password? <a href="index.html">click here</a></p>
+        <p>don't have account? <a href="assets/page/sign up/index.html">sign up</a></p>
+    </form>
+</div>
+    <!----// header section design //---->
+
+    <!-- aside open bar cart -->
+    <aside class="cart">
+        <h2>Shopping Cart</h2>
+        <ul>
+            <!-- Empty shopping cart -->
+        </ul>
+        <div class="total">
+            <span>Total:</span>
+            <span class="amount">$0</span>
+        </div>
+        <a href="assets/page/Checkout.html"><button class="done">Complete purchase</button></a>
+    </aside>
+    <!--// aside open bar cart //-->
+
+    <hr>
+    <br>
+    <br>
+
+
+    <!-- CTA Section -->
+    <section class="cta-section" data-aos="fade-up" style="margin-top: 63px;">
+      <div class="container">
+        <h2>Ready to Experience E-Store?</h2>
+        <p>
+          Join thousands of satisfied customers who trust us for their shopping
+          needs.
+        </p>
+        <a href="/assets/page/shop/shop.html" class="cta-btn">Shop Now</a>
+      </div>
+    </section>
+
+    <!-- PRODUCT GRID -->
+    <div class="product-main">
+
+        <h2 class="title">New Products</h2>
+
+        <div class="product-grid">
+
+
+            
+            <div class="showcase">
+
+                <div class="showcase-banner product-image">
+                    <img src="/assets/images/products/jacket-3.jpg" alt="Mens Winter Leathers Jackets" width="300"
+                        class="product-img default">
+                    <img src="/assets\images\products\jacket-4.jpg" alt="Mens Winter Leathers Jackets" width="300"
+                        class="product-img hover">
+
+                    <p class="showcase-badge">15%</p>
+
+                    <div class="showcase-actions">
+
+                        <button class="btn-action">
+                            <ion-icon name="heart-outline"></ion-icon>
+                        </button>
+
+                        <button class="btn-action">
+                            <ion-icon name="eye-outline"></ion-icon>
+                        </button>
+
+                        <button class="btn-action add-to-cart">
+                            <ion-icon name="bag-add-outline"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="showcase-content">
+
+                    <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-category">jacket</a>
+
+                    <a href="assets/page/product/all pro/index - Copy (10).html">
+                        <h3 class="showcase-title">Mens Winter Leathers Jackets</h3>
+                    </a>
+
+                    <div class="showcase-rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                    </div>
+
+                    <div class="price-box">
+                        <p class="price product-price">$48.00</p>
+                        <del>$75.00</del>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="showcase">
+
+                <div class="showcase-banner product-image">
+                    <img src="/assets/images/products/jacket-5.jpg" alt="MEN Yarn Fleece Full-Zip Jacket"
+                        class="product-img default" width="300">
+                    <img src="/assets/images/products/jacket-6.jpg" alt="MEN Yarn Fleece Full-Zip Jacket"
+                        class="product-img hover" width="300">
+
+                    <div class="showcase-actions">
+                        <button class="btn-action">
+                            <ion-icon name="heart-outline"></ion-icon>
+                        </button>
+
+                        <button class="btn-action">
+                            <ion-icon name="eye-outline"></ion-icon>
+                        </button>
+
+
+
+                        <button class="btn-action add-to-cart">
+                            <ion-icon name="bag-add-outline"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="showcase-content">
+                    <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-category">Jacket</a>
+
+                    <h3>
+                        <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-title">MEN Yarn Fleece Full-Zip Jacket</a>
+                    </h3>
+
+                    <div class="showcase-rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                    </div>
+
+                    <div class="price-box">
+                        <p class="price product-price">$48.00</p>
+                        <del>$65.00</del>
+                    </div>
+
+                </div>
+
+            </div>
+
+            
+            <div class="showcase">
+
+                <div class="showcase-banner product-image">
+                    <img src="/assets/images/products/shoe-2.jpg" alt="Casual Men's Brown shoes"
+                        class="product-img default" width="300">
+                    <img src="/assets/images/products/shoe-2_1.jpg" alt="Casual Men's Brown shoes"
+                        class="product-img hover" width="300">
+
+                    <div class="showcase-actions">
+                        <button class="btn-action">
+                            <ion-icon name="heart-outline"></ion-icon>
+                        </button>
+
+                        <button class="btn-action">
+                            <ion-icon name="eye-outline"></ion-icon>
+                        </button>
+
+
+
+                        <button class="btn-action add-to-cart">
+                            <ion-icon name="bag-add-outline"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="showcase-content">
+                    <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-category">casual</a>
+
+                    <h3>
+                        <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-title">Casual Men's Brown shoes</a>
+                    </h3>
+
+                    <div class="showcase-rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                    </div>
+
+                    <div class="price-box">
+                        <p class="price product-price">$48.00</p>
+                        <del>$105.00</del>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="showcase">
+
+                <div class="showcase-banner product-image">
+                    <img src="/assets/images/products/watch-3.jpg" alt="Pocket Watch Leather Pouch"
+                        class="product-img default" width="300">
+                    <img src="/assets/images/products/watch-4.jpg" alt="Pocket Watch Leather Pouch"
+                        class="product-img hover" width="300">
+
+                    <p class="showcase-badge angle black">sale</p>
+
+                    <div class="showcase-actions">
+                        <button class="btn-action">
+                            <ion-icon name="heart-outline"></ion-icon>
+                        </button>
+
+                        <button class="btn-action">
+                            <ion-icon name="eye-outline"></ion-icon>
+                        </button>
+
+
+
+                        <button class="btn-action add-to-cart">
+                            <ion-icon name="bag-add-outline"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="showcase-content">
+                    <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-category">watches</a>
+
+                    <h3>
+                        <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-title">Pocket Watch Leather Pouch</a>
+                    </h3>
+
+                    <div class="showcase-rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                    </div>
+
+                    <div class="price-box">
+                        <p class="price product-price">$48.00</p>
+                        <del>$170.00</del>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="showcase">
+
+                <div class="showcase-banner product-image">
+                    <img src="/assets/images/products/watch-1.jpg" alt="Smart watche Vital Plus"
+                        class="product-img default" width="300">
+                    <img src="/assets/images/products/watch-2.jpg" alt="Smart watche Vital Plus"
+                        class="product-img hover" width="300">
+
+                    <div class="showcase-actions">
+                        <button class="btn-action">
+                            <ion-icon name="heart-outline"></ion-icon>
+                        </button>
+
+                        <button class="btn-action">
+                            <ion-icon name="eye-outline"></ion-icon>
+                        </button>
+
+
+
+                        <button class="btn-action add-to-cart">
+                            <ion-icon name="bag-add-outline"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="showcase-content">
+                    <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-category">watches</a>
+
+                    <h3>
+                        <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-title">Smart watche Vital Plus</a>
+                    </h3>
+
+                    <div class="showcase-rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                    </div>
+
+                    <div class="price-box">
+                        <p class="price product-price">$48.00</p>
+                        <del>$120.00</del>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="showcase">
+
+                <div class="showcase-banner product-image">
+                    <img src="/assets/images/products/jacket-1.jpg" alt="Mens Winter Leathers Jackets"
+                        class="product-img default" width="300">
+                    <img src="/assets/images/products/jacket-2.jpg" alt="Mens Winter Leathers Jackets"
+                        class="product-img hover" width="300">
+
+                    <div class="showcase-actions">
+                        <button class="btn-action">
+                            <ion-icon name="heart-outline"></ion-icon>
+                        </button>
+
+                        <button class="btn-action">
+                            <ion-icon name="eye-outline"></ion-icon>
+                        </button>
+
+
+
+                        <button class="btn-action add-to-cart">
+                            <ion-icon name="bag-add-outline"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="showcase-content">
+                    <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-category">T-shirt</a>
+
+                    <h3>
+                        <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-title">Mens Winter Leathers T-shirt</a>
+                    </h3>
+
+                    <div class="showcase-rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                    </div>
+
+                    <div class="price-box">
+                        <p class="price product-price">$48.00</p>
+                        <del>$45.00</del>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="showcase">
+
+                <div class="showcase-banner product-image">
+                    <img src="/assets/images/products/sports-2.jpg" alt="Trekking & Running Shoes - black"
+                        class="product-img default" width="300">
+                    <img src="/assets/images/products/sports-4.jpg" alt="Trekking & Running Shoes - black"
+                        class="product-img hover" width="300">
+
+                    <p class="showcase-badge angle black">sale</p>
+
+                    <div class="showcase-actions">
+                        <button class="btn-action">
+                            <ion-icon name="heart-outline"></ion-icon>
+                        </button>
+
+                        <button class="btn-action">
+                            <ion-icon name="eye-outline"></ion-icon>
+                        </button>
+
+
+
+                        <button class="btn-action add-to-cart">
+                            <ion-icon name="bag-add-outline"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="showcase-content">
+                    <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-category">sports</a>
+
+                    <h3>
+                        <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-title">Trekking & Running Shoes - black</a>
+                    </h3>
+
+                    <div class="showcase-rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                    </div>
+
+                    <div class="price-box">
+                        <p class="price product-price">$48.00</p>
+                        <del>$64.00</del>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="showcase">
+
+                <div class="showcase-banner product-image">
+                    <img src="/assets/images/products/shoe-1.jpg" alt="Men's Leather Formal Wear shoes"
+                        class="product-img default" width="300">
+                    <img src="/assets/images/products/shoe-1_1.jpg" alt="Men's Leather Formal Wear shoes"
+                        class="product-img hover" width="300">
+
+                    <div class="showcase-actions">
+                        <button class="btn-action">
+                            <ion-icon name="heart-outline"></ion-icon>
+                        </button>
+
+                        <button class="btn-action">
+                            <ion-icon name="eye-outline"></ion-icon>
+                        </button>
+
+
+
+                        <button class="btn-action add-to-cart">
+                            <ion-icon name="bag-add-outline"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="showcase-content">
+                    <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-category">formal</a>
+
+                    <h3>
+                        <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-title">Men's Leather Formal Wear shoes</a>
+                    </h3>
+
+                    <div class="showcase-rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                    </div>
+
+                    <div class="price-box">
+                        <p class="price product-price">$48.00</p>
+                        <del>$65.00</del>
+                    </div>
+
+                </div>
+
+            </div>
+
+                        <div class="showcase">
+
+                <div class="showcase-banner product-image">
+                    <img src="/assets/images/products/jacket-3.jpg" alt="Mens Winter Leathers Jackets" width="300"
+                        class="product-img default">
+                    <img src="/assets/images/products/jacket-4.jpg" alt="Mens Winter Leathers Jackets" width="300"
+                        class="product-img hover">
+
+                    <p class="showcase-badge">15%</p>
+
+                    <div class="showcase-actions">
+
+                        <button class="btn-action">
+                            <ion-icon name="heart-outline"></ion-icon>
+                        </button>
+
+                        <button class="btn-action">
+                            <ion-icon name="eye-outline"></ion-icon>
+                        </button>
+
+                        <button class="btn-action add-to-cart">
+                            <ion-icon name="bag-add-outline"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="showcase-content">
+
+                    <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-category">jacket</a>
+
+                    <a href="assets/page/product/all pro/index - Copy (10).html">
+                        <h3 class="showcase-title">Mens Winter Leathers Jackets</h3>
+                    </a>
+
+                    <div class="showcase-rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                    </div>
+
+                    <div class="price-box">
+                        <p class="price product-price">$48.00</p>
+                        <del>$75.00</del>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="showcase">
+
+                <div class="showcase-banner product-image">
+                    <img src="/assets/images/products/jacket-5.jpg" alt="MEN Yarn Fleece Full-Zip Jacket"
+                        class="product-img default" width="300">
+                    <img src="/assets/images/products/jacket-6.jpg" alt="MEN Yarn Fleece Full-Zip Jacket"
+                        class="product-img hover" width="300">
+
+                    <div class="showcase-actions">
+                        <button class="btn-action">
+                            <ion-icon name="heart-outline"></ion-icon>
+                        </button>
+
+                        <button class="btn-action">
+                            <ion-icon name="eye-outline"></ion-icon>
+                        </button>
+
+
+
+                        <button class="btn-action add-to-cart">
+                            <ion-icon name="bag-add-outline"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="showcase-content">
+                    <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-category">Jacket</a>
+
+                    <h3>
+                        <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-title">MEN Yarn Fleece Full-Zip Jacket</a>
+                    </h3>
+
+                    <div class="showcase-rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                    </div>
+
+                    <div class="price-box">
+                        <p class="price product-price">$48.00</p>
+                        <del>$65.00</del>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="showcase">
+
+                <div class="showcase-banner product-image">
+                    <img src="/assets/images/products/shoe-2.jpg" alt="Casual Men's Brown shoes"
+                        class="product-img default" width="300">
+                    <img src="/assets/images/products/shoe-2_1.jpg" alt="Casual Men's Brown shoes"
+                        class="product-img hover" width="300">
+
+                    <div class="showcase-actions">
+                        <button class="btn-action">
+                            <ion-icon name="heart-outline"></ion-icon>
+                        </button>
+
+                        <button class="btn-action">
+                            <ion-icon name="eye-outline"></ion-icon>
+                        </button>
+
+
+
+                        <button class="btn-action add-to-cart">
+                            <ion-icon name="bag-add-outline"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="showcase-content">
+                    <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-category">casual</a>
+
+                    <h3>
+                        <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-title">Casual Men's Brown shoes</a>
+                    </h3>
+
+                    <div class="showcase-rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                    </div>
+
+                    <div class="price-box">
+                        <p class="price product-price">$48.00</p>
+                        <del>$105.00</del>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="showcase">
+
+                <div class="showcase-banner product-image">
+                    <img src="/assets/images/products/watch-3.jpg" alt="Pocket Watch Leather Pouch"
+                        class="product-img default" width="300">
+                    <img src="/assets/images/products/watch-4.jpg" alt="Pocket Watch Leather Pouch"
+                        class="product-img hover" width="300">
+
+                    <p class="showcase-badge angle black">sale</p>
+
+                    <div class="showcase-actions">
+                        <button class="btn-action">
+                            <ion-icon name="heart-outline"></ion-icon>
+                        </button>
+
+                        <button class="btn-action">
+                            <ion-icon name="eye-outline"></ion-icon>
+                        </button>
+
+
+
+                        <button class="btn-action add-to-cart">
+                            <ion-icon name="bag-add-outline"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="showcase-content">
+                    <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-category">watches</a>
+
+                    <h3>
+                        <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-title">Pocket Watch Leather Pouch</a>
+                    </h3>
+
+                    <div class="showcase-rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                    </div>
+
+                    <div class="price-box">
+                        <p class="price product-price">$48.00</p>
+                        <del>$170.00</del>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="showcase">
+
+                <div class="showcase-banner product-image">
+                    <img src="/assets/images/products/watch-1.jpg" alt="Smart watche Vital Plus"
+                        class="product-img default" width="300">
+                    <img src="/assets/images/products/watch-2.jpg" alt="Smart watche Vital Plus"
+                        class="product-img hover" width="300">
+
+                    <div class="showcase-actions">
+                        <button class="btn-action">
+                            <ion-icon name="heart-outline"></ion-icon>
+                        </button>
+
+                        <button class="btn-action">
+                            <ion-icon name="eye-outline"></ion-icon>
+                        </button>
+
+
+
+                        <button class="btn-action add-to-cart">
+                            <ion-icon name="bag-add-outline"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="showcase-content">
+                    <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-category">watches</a>
+
+                    <h3>
+                        <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-title">Smart watche Vital Plus</a>
+                    </h3>
+
+                    <div class="showcase-rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                    </div>
+
+                    <div class="price-box">
+                        <p class="price product-price">$48.00</p>
+                        <del>$120.00</del>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="showcase">
+
+                <div class="showcase-banner product-image">
+                    <img src="/assets/images/products/jacket-1.jpg" alt="Mens Winter Leathers Jackets"
+                        class="product-img default" width="300">
+                    <img src="/assets/images/products/jacket-2.jpg" alt="Mens Winter Leathers Jackets"
+                        class="product-img hover" width="300">
+
+                    <div class="showcase-actions">
+                        <button class="btn-action">
+                            <ion-icon name="heart-outline"></ion-icon>
+                        </button>
+
+                        <button class="btn-action">
+                            <ion-icon name="eye-outline"></ion-icon>
+                        </button>
+
+
+
+                        <button class="btn-action add-to-cart">
+                            <ion-icon name="bag-add-outline"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="showcase-content">
+                    <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-category">T-shirt</a>
+
+                    <h3>
+                        <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-title">Mens Winter Leathers T-shirt</a>
+                    </h3>
+
+                    <div class="showcase-rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                    </div>
+
+                    <div class="price-box">
+                        <p class="price product-price">$48.00</p>
+                        <del>$45.00</del>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="showcase">
+
+                <div class="showcase-banner product-image">
+                    <img src="/assets/images/products/sports-2.jpg" alt="Trekking & Running Shoes - black"
+                        class="product-img default" width="300">
+                    <img src="/assets/images/products/sports-4.jpg" alt="Trekking & Running Shoes - black"
+                        class="product-img hover" width="300">
+
+                    <p class="showcase-badge angle black">sale</p>
+
+                    <div class="showcase-actions">
+                        <button class="btn-action">
+                            <ion-icon name="heart-outline"></ion-icon>
+                        </button>
+
+                        <button class="btn-action">
+                            <ion-icon name="eye-outline"></ion-icon>
+                        </button>
+
+
+
+                        <button class="btn-action add-to-cart">
+                            <ion-icon name="bag-add-outline"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="showcase-content">
+                    <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-category">sports</a>
+
+                    <h3>
+                        <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-title">Trekking & Running Shoes - black</a>
+                    </h3>
+
+                    <div class="showcase-rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                    </div>
+
+                    <div class="price-box">
+                        <p class="price product-price">$48.00</p>
+                        <del>$64.00</del>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="showcase">
+
+                <div class="showcase-banner product-image">
+                    <img src="/assets/images/products/shoe-2.jpg" alt="Casual Men's Brown shoes"
+                        class="product-img default" width="300">
+                    <img src="/assets/images/products/shoe-2_1.jpg" alt="Casual Men's Brown shoes"
+                        class="product-img hover" width="300">
+
+                    <div class="showcase-actions">
+                        <button class="btn-action">
+                            <ion-icon name="heart-outline"></ion-icon>
+                        </button>
+
+                        <button class="btn-action">
+                            <ion-icon name="eye-outline"></ion-icon>
+                        </button>
+
+
+
+                        <button class="btn-action add-to-cart">
+                            <ion-icon name="bag-add-outline"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="showcase-content">
+                    <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-category">casual</a>
+
+                    <h3>
+                        <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-title">Casual Men's Brown shoes</a>
+                    </h3>
+
+                    <div class="showcase-rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                    </div>
+
+                    <div class="price-box">
+                        <p class="price product-price">$48.00</p>
+                        <del>$105.00</del>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!--// PRODUCT GRID //-->
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="content">
+            <div class="top">
+                <div class="logo-details">
+                    <i class="fab fa-slack"></i>
+                    <span>E</span>-<span>Store</span>
+                </div>
+                <div class="media-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="link-boxes">
+                <ul class="box">
+                    <li class="link_name">CATEGORIES</li>
+                    <li><a href="#">Fashion</a></li>
+                    <li><a href="#">Fashion</a></li>
+                    <li><a href="#">Cosmetic</a></li>
+                    <li><a href="#">Health</a></li>
+                </ul>
+                <ul class="box">
+                    <li class="link_name">PRODUCTS</li>
+                    <li><a href="#">Prices Drop</a></li>
+                    <li><a href="#">New Products</a></li>
+                    <li><a href="#">Best Sales</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+                <ul class="box">
+                    <li class="link_name">SERVICES</li>
+                    <li><a href="#">Prices Drop</a></li>
+                    <li><a href="#">New Products</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Best Sales</a></li>
+                </ul>
+                <ul class="box">
+                    <li class="link_name">CONTACT</li>
+                    <li><a href="#">Cairo , Egypt</a></li>
+                    <li><a href="#">111-386-012-6</a></li>
+                    <li><a href="#">Dev.ali@Gmail.Com</a></li>
+                </ul>
+                <ul class="box input-box">
+                    <li class="link_name">Subscribe</li>
+                    <li><input type="text" placeholder="Enter your email"></li>
+                    <li><input type="button" value="Subscribe"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-details">
+            <div class="bottom_text">
+                <span class="copyright_text">Copyright © 2025 <a href="#">CodingLab.</a>All rights reserved</span>
+                <span class="policy_terms">
+                    <a href="#">Privacy policy</a>
+                    <a href="#">Terms & condition</a>
+                </span>
+            </div>
+        </div>
+        <div class="foot">
+
+            <img src="./assets/images/payment.png" alt="payment method" class="payment-img">
+
+            <p class="copyright">
+                Copyright &copy; <a href="#">Ahmed Sami</a> all rights reserved.
+            </p>
+
+    </footer>
+    <!--// FOOTER //-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <!--
+    - ionIcon link
+    -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- bootstrap -->
+    <script src="vendor/bootstrap/js/bootstrap.js"></script>
+    <!-- aos -->
+    <script src="vendor/aos/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1500,
+        });
+    </script>
+    <!-- Custom Script -->
+    <script src="/assets/js/main.js"></script>
+</body>
+
+</html>

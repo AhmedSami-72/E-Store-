@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - E-Store</title>
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="signup-container">
+        <form class="signup-form" id="signupForm">
+            <h2>Create Account</h2>
+            <div class="form-group">
+                <div class="input-field">
+                    <input type="text" id="signupName" placeholder="Full Name" required>
+                    <i class='bx bx-user'></i>
+                </div>
+                <span class="error-message" id="nameError">Name is required</span>
+            </div>
+            <div class="form-group">
+                <div class="input-field">
+                    <input type="email" id="signupEmail" placeholder="Email" required>
+                    <i class='bx bx-envelope'></i>
+                </div>
+                <span class="error-message" id="emailError">Please enter a valid email</span>
+            </div>
+            <div class="form-group">
+                <div class="input-field">
+                    <input type="password" id="signupPassword" placeholder="Password" required>
+                    <i class='bx bx-lock-alt'></i>
+                </div>
+                <span class="error-message" id="passwordError">Password must be 8+ chars with mix of letters, numbers & symbols</span>
+            </div>
+            <div class="form-group">
+                <div class="input-field">
+                    <input type="password" id="signupConfirmPassword" placeholder="Confirm Password" required>
+                    <i class='bx bx-lock-alt'></i>
+                </div>
+                <span class="error-message" id="confirmError">Passwords don't match</span>
+            </div>
+            <button type="submit" class="signup-btn">Sign Up</button>
+            <div class="login-link">
+                Already have an account? <a href="/index.html">Sign In</a>
+            </div>
+        </form>
+    </div>
+    
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>

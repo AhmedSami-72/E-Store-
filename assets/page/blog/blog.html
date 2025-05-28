@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>About Us - E-Store</title>
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="assets/images/logo/logo.png"
+      type="image/x-icon"
+    />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <!-- aos -->
+    <link rel="stylesheet" href="vendor/aos/aos.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- StyleSheet -->
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/assets/css/script.css" />
+    <link rel="stylesheet" href="/assets/css/mediaQuery.css" />
+  </head>
+
+  <body>
+    <!-- dark mode  -->
+    <i class="bi bi-brightness-high-fill" id="scroll-to-top"></i>
+    <!--// dark mode  //-->
+
+    <!-- scroll -->
+    <i class="fa-solid fa-circle-up" id="scroll-to-top-button"></i>
+    <!--// scroll //-->
+
+<!-- aside open bar cart -->
+    <aside class="cart">
+        <h2>Shopping Cart</h2>
+        <ul>
+            <!-- Empty shopping cart -->
+        </ul>
+        <div class="total">
+            <span>Total:</span>
+            <span class="amount">$0</span>
+        </div>
+        <a href="assets/page/Checkout.html"><button class="done">Complete purchase</button></a>
+    </aside>
+    <!--// aside open bar cart //-->
+    <!--// aside open bar cart //-->
+
+    <!-- --header section design---->
+    <header>
+      <div id="menu-bar" class="fas fa-bars" onclick="showMenu()"></div>
+      <a href="" class="logo"><span>E</span>-<span>S</span>tore</a>
+      <nav class="navbar">
+        <a href="/index.html">home</a>
+        <a href="/assets/page/about/about.html" >About</a>
+        <a href="/assets/page/shop/shop.html">Shop</a>
+        <a href="/assets/page/blog/blog.html" class="active">Blog</a>
+        <a href="/assets/page/contact/contact.html">contact</a>
+      </nav>
+      <div class="icon">
+        <i class="fas fa-search" onclick="showbar()" id="search-btn"></i>
+        <div class="user-container" onclick="toggleUserMenu()">
+          <i class="fas fa-user"></i>
+          <span id="loggedInUser"></span>
+          <div class="user-menu" id="userMenu">
+            <a href="#" onclick="logout()">Logout</a>
+          </div>
+        </div>
+        <i class="ri-shopping-cart-line cart-icon"
+          ><a href="#"><span class="cart-count">0</span></a></i
+        >
+      </div>
+
+      <form action="" class="search-form">
+        <input
+          type="search"
+          id="search-bar"
+          onkeyup="search()"
+          placeholder="What you looking for..."
+        />
+        <label for="search-bar" class="fas fa-search"></label>
+      </form>
+    </header>
+
+    <!-- Login Form -->
+    <div class="login-form" id="loginFormContainer">
+      <i class="fas fa-times" id="form-close" onclick="hideLoginForm()"></i>
+      <form id="loginForm">
+        <h3>login</h3>
+        <input
+          type="email"
+          id="loginEmail"
+          class="box"
+          placeholder="Enter your email"
+          required
+          autocomplete="username"
+        />
+        <input
+          type="password"
+          id="loginPassword"
+          class="box"
+          placeholder="Enter your password"
+          required
+          autocomplete="current-password"
+        />
+        <input type="submit" value="login now" class="btn" />
+        <div class="remember-me">
+          <input type="checkbox" id="remember" />
+          <label for="remember">remember me</label>
+        </div>
+        <p>forget password? <a href="index.html">click here</a></p>
+        <p>
+          don't have account?
+          <a href="assets/page/sign up/index.html">sign up</a>
+        </p>
+      </form>
+    </div>
+    <!----// header section design //---->
+
+
+    <!-- Blog Hero Section -->
+    <section class="blog-hero" data-aos="fade-down">
+      <div class="container">
+        <h1>E-Store Blog</h1>
+        <p>
+          Discover the latest trends, shopping tips, and industry insights from
+          our team of experts
+        </p>
+      </div>
+    </section>
+
+    <!-- Main Blog Content -->
+    <div class="blog-container">
+      <!-- Featured Post -->
+      <div class="featured-post" data-aos="fade-up">
+        <div class="blog-card">
+          <img
+            src="/assets/images/cat1.jpg"
+            alt="Featured Blog Post"
+          />
+          <div class="featured-content">
+            <div class="blog-meta">
+              <span><i class="far fa-calendar-alt"></i> June 15, 2023</span>
+              <span class="blog-category">Fashion</span>
+            </div>
+            <h2 class="blog-title">
+              Summer Fashion Trends 2023: What to Wear This Season
+            </h2>
+            <p class="blog-excerpt">
+              Discover the hottest summer fashion trends for 2023 that will keep
+              you looking stylish and feeling comfortable all season long. From
+              bold colors to sustainable fabrics, we've got you covered...
+            </p>
+            <a href="#" class="read-more"
+              >Read More <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Grid -->
+      <div class="blog-grid">
+        <!-- Blog Post 1 -->
+        <div class="blog-card" data-aos="fade-up" data-aos-delay="100">
+          <img src="/assets/images/electronics-banner-1.jpg" alt="Blog Post 1" />
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span><i class="far fa-calendar-alt"></i> June 10, 2023</span>
+              <span class="blog-category">Lifestyle</span>
+            </div>
+            <h2 class="blog-title">
+              10 Essential Items for Your Minimalist Wardrobe
+            </h2>
+            <p class="blog-excerpt">
+              Building a minimalist wardrobe doesn't mean sacrificing style.
+              Here are the 10 essential pieces that will help you create endless
+              outfit combinations...
+            </p>
+            <a href="#" class="read-more"
+              >Read More <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+
+        <!-- Blog Post 2 -->
+        <div class="blog-card" data-aos="fade-up" data-aos-delay="200">
+          <img src="/assets/images/electronics-banner-2.jpg" alt="Blog Post 2" />
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span><i class="far fa-calendar-alt"></i> June 5, 2023</span>
+              <span class="blog-category">Technology</span>
+            </div>
+            <h2 class="blog-title">
+              How AI is Transforming the E-Commerce Experience
+            </h2>
+            <p class="blog-excerpt">
+              Artificial intelligence is revolutionizing online shopping. Learn
+              how AI-powered recommendations, virtual try-ons, and chatbots are
+              enhancing the customer experience...
+            </p>
+            <a href="#" class="read-more"
+              >Read More <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+
+        <!-- Blog Post 3 -->
+        <div class="blog-card" data-aos="fade-up" data-aos-delay="300">
+          <img src="/assets/images/terricks-noah-vId1rcPmSz0-unsplash.jpg" alt="Blog Post 3" />
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span><i class="far fa-calendar-alt"></i> May 28, 2023</span>
+              <span class="blog-category">Beauty</span>
+            </div>
+            <h2 class="blog-title">The Ultimate Skincare Routine for Summer</h2>
+            <p class="blog-excerpt">
+              Hot weather calls for a modified skincare routine. Discover the
+              best products and practices to keep your skin healthy and glowing
+              all summer long...
+            </p>
+            <a href="#" class="read-more"
+              >Read More <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+
+        <!-- Blog Post 4 -->
+        <div class="blog-card" data-aos="fade-up" data-aos-delay="400">
+          <img src="/assets/images/mens-banner.jpg" alt="Blog Post 4" />
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span><i class="far fa-calendar-alt"></i> May 20, 2023</span>
+              <span class="blog-category">Home</span>
+            </div>
+            <h2 class="blog-title">
+              5 Simple Ways to Refresh Your Living Space
+            </h2>
+            <p class="blog-excerpt">
+              You don't need a complete renovation to give your home a fresh
+              look. Try these simple and affordable ideas to transform your
+              space...
+            </p>
+            <a href="#" class="read-more"
+              >Read More <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+
+        <!-- Blog Post 5 -->
+        <div class="blog-card" data-aos="fade-up" data-aos-delay="500">
+          <img src="/assets/images/cta-banner.jpg" alt="Blog Post 5" />
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span><i class="far fa-calendar-alt"></i> May 15, 2023</span>
+              <span class="blog-category">Sustainability</span>
+            </div>
+            <h2 class="blog-title">
+              Eco-Friendly Shopping: How to Make Better Choices
+            </h2>
+            <p class="blog-excerpt">
+              Sustainable shopping is easier than you think. Learn how to
+              identify eco-friendly products and make purchases that align with
+              your values...
+            </p>
+            <a href="#" class="read-more"
+              >Read More <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+
+        <!-- Blog Post 5 -->
+        <div class="blog-card" data-aos="fade-up" data-aos-delay="500">
+          <img src="/assets/images/cat2.jpg" alt="Blog Post 5" />
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span><i class="far fa-calendar-alt"></i> May 15, 2023</span>
+              <span class="blog-category">Sustainability</span>
+            </div>
+            <h2 class="blog-title">
+              Eco-Friendly Shopping: How to Make Better Choices
+            </h2>
+            <p class="blog-excerpt">
+              Sustainable shopping is easier than you think. Learn how to
+              identify eco-friendly products and make purchases that align with
+              your values...
+            </p>
+            <a href="#" class="read-more"
+              >Read More <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div class="pagination" data-aos="fade-up">
+        <a href="#">&laquo;</a>
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">&raquo;</a>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="blog-sidebar">
+        <div class="sidebar-widget" data-aos="fade-left">
+          <h3 class="widget-title">About The Blog</h3>
+          <p>
+            Welcome to the E-Store blog, your go-to resource for the latest
+            trends, shopping tips, and lifestyle inspiration. Our team of
+            experts brings you carefully curated content to enhance your
+            shopping experience.
+          </p>
+        </div>
+
+        <div class="sidebar-widget" data-aos="fade-left" data-aos-delay="100">
+          <h3 class="widget-title">Popular Posts</h3>
+          <ul class="popular-posts">
+            <li>
+              <a href="#">The Best Denim Styles for Every Body Type</a>
+              <br /><small>May 10, 2023</small>
+            </li>
+            <li>
+              <a href="#">Smart Home Gadgets That Will Change Your Life</a>
+              <br /><small>April 28, 2023</small>
+            </li>
+            <li>
+              <a href="#">5 Must-Have Accessories for Summer</a>
+              <br /><small>April 15, 2023</small>
+            </li>
+            <li>
+              <a href="#">How to Build the Perfect Capsule Wardrobe</a>
+              <br /><small>March 30, 2023</small>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sidebar-widget" data-aos="fade-left" data-aos-delay="200">
+          <h3 class="widget-title">Categories</h3>
+          <ul class="categories">
+            <li>
+              <a href="#">Fashion <span>(24)</span></a>
+            </li>
+            <li>
+              <a href="#">Beauty <span>(15)</span></a>
+            </li>
+            <li>
+              <a href="#">Lifestyle <span>(18)</span></a>
+            </li>
+            <li>
+              <a href="#">Technology <span>(12)</span></a>
+            </li>
+            <li>
+              <a href="#">Home <span>(9)</span></a>
+            </li>
+            <li>
+              <a href="#">Sustainability <span>(7)</span></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sidebar-widget" data-aos="fade-left" data-aos-delay="300">
+          <h3 class="widget-title">Tags</h3>
+          <div class="tags">
+            <a href="#" class="tag">fashion</a>
+            <a href="#" class="tag">trends</a>
+            <a href="#" class="tag">summer</a>
+            <a href="#" class="tag">style</a>
+            <a href="#" class="tag">beauty</a>
+            <a href="#" class="tag">skincare</a>
+            <a href="#" class="tag">home</a>
+            <a href="#" class="tag">decor</a>
+            <a href="#" class="tag">tech</a>
+            <a href="#" class="tag">eco</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="content">
+        <div class="top">
+          <div class="logo-details">
+            <i class="fab fa-slack"></i>
+            <span>E</span>-<span>Store</span>
+          </div>
+          <div class="media-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="link-boxes">
+          <ul class="box">
+            <li class="link_name">CATEGORIES</li>
+            <li><a href="#">Fashion</a></li>
+            <li><a href="#">Fashion</a></li>
+            <li><a href="#">Cosmetic</a></li>
+            <li><a href="#">Health</a></li>
+          </ul>
+          <ul class="box">
+            <li class="link_name">PRODUCTS</li>
+            <li><a href="#">Prices Drop</a></li>
+            <li><a href="#">New Products</a></li>
+            <li><a href="#">Best Sales</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+          <ul class="box">
+            <li class="link_name">SERVICES</li>
+            <li><a href="#">Prices Drop</a></li>
+            <li><a href="#">New Products</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Best Sales</a></li>
+          </ul>
+          <ul class="box">
+            <li class="link_name">CONTACT</li>
+            <li><a href="#">Cairo , Egypt</a></li>
+            <li><a href="#">111-386-012-6</a></li>
+            <li><a href="#">Dev.ali@Gmail.Com</a></li>
+          </ul>
+          <ul class="box input-box">
+            <li class="link_name">Subscribe</li>
+            <li><input type="text" placeholder="Enter your email" /></li>
+            <li><input type="button" value="Subscribe" /></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom-details">
+        <div class="bottom_text">
+          <span class="copyright_text"
+            >Copyright © 2021 <a href="#">CodingLab.</a>All rights
+            reserved</span
+          >
+          <span class="policy_terms">
+            <a href="#">Privacy policy</a>
+            <a href="#">Terms & condition</a>
+          </span>
+        </div>
+      </div>
+      <div class="foot">
+        <img
+          src="/assets/images/payment.png"
+          alt="payment method"
+          class="payment-img"
+        />
+        <p class="copyright">
+          Copyright &copy; <a href="#">Ahmed Sami</a> all rights reserved.
+        </p>
+      </div>
+    </footer>
+    <!-- FOOTER -->
+
+    <!-- ionIcon link -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- bootstrap -->
+    <script src="vendor/bootstrap/js/bootstrap.js"></script>
+    <!-- aos -->
+    <script src="vendor/aos/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1500,
+      });
+    </script>
+    <!-- Custom Script -->
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
