@@ -1,7 +1,7 @@
 
 
-// ============ PRELOADER ============
-// Shows loading animation until page fully loads
+// ============ PRELOADER ============ //
+// Shows loading animation until page fully loads //
 window.addEventListener("load", () => {
   const loader = document.getElementById("pre-loader");
   setTimeout(() => {
@@ -176,72 +176,100 @@ toggle.addEventListener("click", function () {
   localStorage.setItem("mode", isDark ? "dark" : "light");
 });
 
+
 // ============ SHOPPING CART ============
 var cartBtn = document.querySelector(".cart-icon");
-var cartCount = document.querySelector(".cart-count");
-var cart = document.querySelector(".cart");
-var cartTotal = document.querySelector(".cart .total .amount");
-var cartItems = [];
+  var cartCount = document.querySelector(".cart-count");
+  var cart = document.querySelector(".cart");
+  var cartTotal = document.querySelector(".cart .total .amount");
+  var cartItems = [];
 
-// Add item to cart
-function addToCart(event) {
-  var product = event.target.parentNode;
-  var title = product.querySelector("h2").textContent;
-  var price = product.querySelector(".price").textContent;
-  var item = {
-    title: title,
-    price: price,
-  };
-  cartItems.push(item);
-  updateCart();
-}
-
-// Remove item from cart
-function removeFromCart(event) {
-  var index = parseInt(event.target.getAttribute("data-index"));
-  cartItems.splice(index, 1);
-  updateCart();
-}
-
-// Update cart display
-function updateCart() {
-  var cartList = cart.querySelector("ul");
-  var total = 0;
-  cartList.innerHTML = "";
-  for (var i = 0; i < cartItems.length; i++) {
-    var item = cartItems[i];
-    var li = document.createElement("li");
-    var title = document.createElement("span");
-    var price = document.createElement("span");
-    var removeBtn = document.createElement("button");
-    title.textContent = item.title;
-    price.textContent = item.price;
-    removeBtn.textContent = "Remove";
-    removeBtn.setAttribute("data-index", i);
-    removeBtn.classList.add("remove-item");
-    removeBtn.addEventListener("click", removeFromCart);
-    li.appendChild(title);
-    li.appendChild(price);
-    li.appendChild(removeBtn);
-    cartList.appendChild(li);
-    total += parseFloat(item.price.replace("$", ""));
+  // تحميل السلة من التخزين المحلي
+  if (localStorage.getItem("cartItems")) {
+    cartItems = JSON.parse(localStorage.getItem("cartItems"));
+    updateCart();
   }
-  cartTotal.textContent = "$" + total.toFixed(2);
-  cartCount.textContent = cartItems.length;
-}
 
-// Toggle cart visibility
-function toggleCart() {
-  cart.classList.toggle("open");
-}
+  // دالة إضافة منتج للسلة
+  function addToCart(event) {
+    var product = event.target.closest(".showcase");
+    if (!product) return;
 
-// Set up cart event listeners
-cartBtn.addEventListener("click", toggleCart);
-var addToCartBtns = document.querySelectorAll(".add-to-cart");
-for (var i = 0; i < addToCartBtns.length; i++) {
-  addToCartBtns[i].addEventListener("click", addToCart);
-}
+    var title = product.querySelector(".showcase-title").textContent.trim();
+    var price = product.querySelector(".product-price").textContent.trim();
 
+    // نبحث هل المنتج مضاف مسبقًا
+    var existingItem = cartItems.find((item) => item.title === title);
+
+    if (!existingItem) {
+      cartItems.push({
+        title: title,
+        price: price,
+        quantity: 1,
+      });
+      localStorage.setItem("cartItems", JSON.stringify(cartItems));
+      updateCart();
+    } else {
+      alert("تم إضافة هذا المنتج بالفعل. يمكنك تعديل الكمية لاحقًا من داخل السلة أو من صفحة المنتج.");
+    }
+  }
+
+  // إزالة منتج من السلة
+  function removeFromCart(event) {
+    var index = event.target.getAttribute("data-index");
+    cartItems.splice(index, 1);
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    updateCart();
+  }
+
+  // تحديث مظهر السلة
+  function updateCart() {
+    var cartList = cart.querySelector("ul");
+    var total = 0;
+    var count = 0;
+    cartList.innerHTML = "";
+
+    for (var i = 0; i < cartItems.length; i++) {
+      var item = cartItems[i];
+      var li = document.createElement("li");
+      var title = document.createElement("span");
+      var price = document.createElement("span");
+      var quantity = document.createElement("span");
+      var removeBtn = document.createElement("button");
+
+      title.textContent = item.title;
+      price.textContent = item.price;
+      quantity.textContent = ` ×${item.quantity}`;
+
+      removeBtn.textContent = "إزالة";
+      removeBtn.setAttribute("data-index", i);
+      removeBtn.classList.add("remove-item");
+      removeBtn.addEventListener("click", removeFromCart);
+
+      li.appendChild(title);
+      li.appendChild(quantity);
+      li.appendChild(price);
+      li.appendChild(removeBtn);
+      cartList.appendChild(li);
+
+      total += parseFloat(item.price.replace("$", "")) * item.quantity;
+      count += item.quantity;
+    }
+
+    cartTotal.textContent = "$" + total.toFixed(2);
+    cartCount.textContent = count;
+  }
+
+  // فتح/غلق السلة
+  cartBtn.addEventListener("click", function () {
+    cart.classList.toggle("open");
+  });
+
+  // ربط الأزرار بالوظيفة
+  var addToCartBtns = document.querySelectorAll(".add-to-cart");
+  for (var i = 0; i < addToCartBtns.length; i++) {
+    addToCartBtns[i].addEventListener("click", addToCart);
+  }
 // ============ CONTACT FORM VALIDATION ============
 function formValidation() {
   let name = document.getElementById("name");

@@ -200,3 +200,7 @@ img{
         padding-top: 0;
     }
 }
+
+section .cta-section{
+    margin-top: 55px important;
+}

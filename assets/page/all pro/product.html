@@ -1,31 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+  <head>
+    <title>Product Description - E-Store</title>
     <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/images/logo/logo.png" type="image/x-icon" />
-    <title>E-Store</title>
+    <link
+      rel="shortcut icon"
+      href="assets/images/logo/logo.png"
+      type="image/x-icon"
+    />
     <!-- font-awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- bootstrap -->
-    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
     <!-- aos -->
-    <link rel="stylesheet" href="vendor/aos/aos.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="vendor/aos/aos.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <!-- StyleSheet -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/script.css">    
-    <link rel="stylesheet" href="assets/css/mediaQuery.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/assets/css/script.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/mediaQuery.css" />
+  </head>
 
-<body>
-
+  <body>
     <!-- dark mode  -->
     <i class="bi bi-brightness-high-fill" id="scroll-to-top"></i>
     <!--// dark mode  //-->
@@ -34,71 +44,43 @@
     <i class="fa-solid fa-circle-up" id="scroll-to-top-button"></i>
     <!--// scroll //-->
 
-
-    <!-- pre-loader -->
-    <div id="pre-loader">
-        <div class="loader"></div>
-    </div>
-    <!--// pre-loader //-->
-
-    <!-- PopUp -->
-    <div class="popup" id="popup">
-        <div class="popup-content">
-            <div class="popup-close">
-                <i class="fas fa-times"></i>
-            </div>
-            <div class="popup-left">
-                <div class="popup-img">
-                    <img src="assets/images/popup.png" alt="popup">
-                </div>
-            </div>
-            <div class="popup-right">
-                <div class="right-content">
-                    <h1>
-                        Get Discount <span>30%</span> Off
-                    </h1>
-                    <p>
-                        Sign up to our blogletter and save 30% for you next purchase. No spam, we promise!
-                    </p>
-                    <form action="#">
-                        <input type="email" placeholder="Enter your email..." class="popup-form">
-                        <a href="#" id="subscribe-btn">Subscribe</a>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--// PopUp //-->
-
     <!-- --header section design---->
-<header>
-    <div id="menu-bar" class="fas fa-bars" onclick="showMenu()"></div>
-    <a href="" class="logo"><span>E</span>-<span>S</span>tore</a>
-    <nav class="navbar">
-        <a href="/index.html" class="active">home</a>
+    <header>
+      <div id="menu-bar" class="fas fa-bars" onclick="showMenu()"></div>
+      <a href="" class="logo"><span>E</span>-<span>S</span>tore</a>
+      <nav class="navbar">
+        <a href="/index.html">home</a>
         <a href="/assets/page/about/about.html">About</a>
         <a href="/assets/page/shop/shop.html">Shop</a>
         <a href="/assets/page/blog/blog.html">Blog</a>
-        <a href="assets/page/contact/contact.html">contact</a>
-    </nav>
-    <div class="icon">
+        <a href="/assets/page/contact/contact.html">contact</a>
+      </nav>
+      <div class="icon">
         <i class="fas fa-search" onclick="showbar()" id="search-btn"></i>
         <div class="user-container" onclick="toggleUserMenu()">
-            <i class="fas fa-user"></i>
-            <span id="loggedInUser"></span>
-            <div class="user-menu" id="userMenu">
-                <a href="#" onclick="logout()">Logout</a>
-            </div>
+          <i class="fas fa-user"></i>
+          <span id="loggedInUser"></span>
+          <div class="user-menu" id="userMenu">
+            <a href="#" onclick="logout()">Logout</a>
+          </div>
         </div>
-        <i class="ri-shopping-cart-line cart-icon"><a href="#"><span class="cart-count">0</span></a></i>
-    </div>
-    
-    <form action="" class="search-form">
-        <input type="search" id="search-bar" onkeyup="search()" placeholder="What you looking for...">
-        <label for="search-bar" class="fas fa-search"></label>
-    </form>
-</header>
+        <i class="ri-shopping-cart-line cart-icon"
+          ><a href="#"><span class="cart-count">0</span></a></i
+        >
+      </div>
 
+      <form action="" class="search-form">
+        <input
+          type="search"
+          id="search-bar"
+          onkeyup="search()"
+          placeholder="What you looking for..."
+        />
+        <label for="search-bar" class="fas fa-search"></label>
+      </form>
+    </header>
+    <!--// header section design //-->
+    
 <!-- Login Form -->
 <div class="login-form" id="loginFormContainer">
     <i class="fas fa-times" id="form-close" onclick="hideLoginForm()"></i>
@@ -112,88 +94,10 @@
             <label for="remember">remember me</label>
         </div>
         <p>forget password? <a href="index.html">click here</a></p>
-        <p>don't have account? <a href="assets/page/sign up/signUp.html">sign up</a></p>
+        <p>don't have account? <a href="assets/page/sign up/index.html">sign up</a></p>
     </form>
 </div>
     <!----// header section design //---->
-
-    <!----home section design---->
-    <section class="home">
-        <div class="home-text">
-            <h4>In this season, find the best 🔥</h4>
-            <h1>Exclusive collection for everyone</h1>
-            <a href="#" class="btn">Explore now</a>
-        </div>
-
-        <div class="home-img" data-aos="zoom-out-down">
-            <img class="shadow-img" src="assets/images/New folder (2)/3.png">
-        </div>
-    </section>
-    <!----// home section design //---->
-
-    <!----feature section design---->
-    <section class="feature">
-        <div class="middle-text">
-            <h2>Discover more <span>Good things.</span></h2>
-        </div>
-
-        <div class="feature-content">
-            <div class="row">
-                <div class="main-row">
-                    <div class="row-text">
-                        <h6>Explore new arrivals</h6>
-                        <h3>Collections <br> men</h3>
-                        <a href="#" class="row-btn">Show me all</a>
-                    </div>
-                    <div class="row-img">
-                        <img src="assets/images/products/d1.png">
-                    </div>
-                </div>
-            </div>
-
-            <div class="row row2">
-                <div class="main-row">
-                    <div class="row-text">
-                        <h6>Explore new arrivals</h6>
-                        <h3>Collections <br> Women</h3>
-                        <a href="#" class="row-btn">Show me all</a>
-                    </div>
-                    <div class="row-img big">
-                        <img src="assets/images/products/d5.png">
-                    </div>
-                </div>
-            </div>
-
-            <div class="row row3">
-                <div class="main-row">
-                    <div class="row-text">
-                        <h6>Explore new arrivals</h6>
-                        <h3>Collections <br> children</h3>
-                        <a href="#" class="row-btn">Show me all</a>
-                    </div>
-                    <div class="row-img">
-                        <img src="assets/images/products/d2.png">
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <!----// feature section design //---->
-
-    <!----cta section design---->
-    <section class="home">
-        <div class="home-text">
-            <h4>This season, it's all about you 🔥</h4>
-            <h1>Premium picks for every mood</h1>
-            <a href="assets/page/shop/shop.html" class="btn">Explore now</a>
-        </div>
-
-        <div class="home-img" data-aos="zoom-out-down">
-            <img src="assets/images/logo/logo.png">
-        </div>
-    </section>
-    <!----// cta section design //---->
 
     <!-- aside open bar cart -->
     <aside class="cart">
@@ -205,7 +109,7 @@
             <span>Total:</span>
             <span class="amount">$0</span>
         </div>
-        <a href="assets/page/checkout/payment.html"><button class="done">Complete purchase</button></a>
+        <a href="/assets/page/checkout/payment.html"><button class="done">Complete purchase</button></a>
     </aside>
     <!--// aside open bar cart //-->
 
@@ -213,19 +117,133 @@
     <br>
     <br>
 
+
+    <!-- CTA Section -->
+    <section class="cta-section" data-aos="fade-up" style="margin-top: 63px;">
+      <div class="container">
+        <h2>Ready to Experience E-Store?</h2>
+        <p>
+          Join thousands of satisfied customers who trust us for their shopping
+          needs.
+        </p>
+        <a href="/assets/page/shop/shop.html" class="cta-btn">Shop Now</a>
+      </div>
+    </section>
+
+    <!--// CTA Section //-->
+    <div class = "card-wrapper">
+      <div class = "card">
+        <!-- card left -->
+        <div class = "product-imgs">
+          <div class = "img-display">
+            <div class = "img-showcase">
+              <img src = "shoes_images/shoe_1.jpg" alt = "shoe image">
+              <img src = "shoes_images/shoe_2.jpg" alt = "shoe image">
+              <img src = "shoes_images/shoe_3.jpg" alt = "shoe image">
+              <img src = "shoes_images/shoe_4.jpg" alt = "shoe image">
+            </div>
+          </div>
+          <div class = "img-select">
+            <div class = "img-item">
+              <a href = "#" data-id = "1">
+                <img src = "shoes_images/shoe_1.jpg" alt = "shoe image">
+              </a>
+            </div>
+            <div class = "img-item">
+              <a href = "#" data-id = "2">
+                <img src = "shoes_images/shoe_2.jpg" alt = "shoe image">
+              </a>
+            </div>
+            <div class = "img-item">
+              <a href = "#" data-id = "3">
+                <img src = "shoes_images/shoe_3.jpg" alt = "shoe image">
+              </a>
+            </div>
+            <div class = "img-item">
+              <a href = "#" data-id = "4">
+                <img src = "shoes_images/shoe_4.jpg" alt = "shoe image">
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- card right -->
+        <div class = "product-content">
+          <h2 class = "product-title">nike shoes</h2>
+          <a href = "#" class = "product-link">visit nike store</a>
+          <div class = "product-rating">
+            <i class = "fas fa-star"></i>
+            <i class = "fas fa-star"></i>
+            <i class = "fas fa-star"></i>
+            <i class = "fas fa-star"></i>
+            <i class = "fas fa-star-half-alt"></i>
+            <span>4.7(21)</span>
+          </div>
+
+          <div class = "product-price">
+            <p class = "last-price">Old Price: <span>$257.00</span></p>
+            <p class = "new-price">New Price: <span>$249.00 (5%)</span></p>
+          </div>
+
+          <div class = "product-detail">
+            <h2>about this item: </h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo eveniet veniam tempora fuga tenetur placeat sapiente architecto illum soluta consequuntur, aspernatur quidem at sequi ipsa!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, perferendis eius. Dignissimos, labore suscipit. Unde.</p>
+            <ul>
+              <li>Color: <span>Black</span></li>
+              <li>Available: <span>in stock</span></li>
+              <li>Category: <span>Shoes</span></li>
+              <li>Shipping Area: <span>All over the world</span></li>
+              <li>Shipping Fee: <span>Free</span></li>
+            </ul>
+          </div>
+
+          <div class = "purchase-info">
+            <input type = "number" min = "0" value = "1">
+            <a href="/assets/page/checkout/payment.html"><button type = "button" class = "btn">
+              Add to Cart <i class = "fas fa-shopping-cart"></i>
+            </button></a>
+            <button type = "button" class = "btn">Compare</button>
+          </div>
+
+          <div class = "social-links">
+            <p>Share At: </p>
+            <a href = "#">
+              <i class = "fab fa-facebook-f"></i>
+            </a>
+            <a href = "#">
+              <i class = "fab fa-twitter"></i>
+            </a>
+            <a href = "#">
+              <i class = "fab fa-instagram"></i>
+            </a>
+            <a href = "#">
+              <i class = "fab fa-whatsapp"></i>
+            </a>
+            <a href = "#">
+              <i class = "fab fa-pinterest"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<br><br><br>
+
     <!-- PRODUCT GRID -->
     <div class="product-main">
 
-        <h2 class="title">New Products</h2>
+        <h2 class="title">Recommended for You</h2>
 
         <div class="product-grid">
 
+
+            
             <div class="showcase">
 
                 <div class="showcase-banner product-image">
-                    <img src="./assets/images/products/jacket-3.jpg" alt="Mens Winter Leathers Jackets" width="300"
+                    <img src="/assets/images/products/jacket-3.jpg" alt="Mens Winter Leathers Jackets" width="300"
                         class="product-img default">
-                    <img src="./assets/images/products/jacket-4.jpg" alt="Mens Winter Leathers Jackets" width="300"
+                    <img src="/assets\images\products\jacket-4.jpg" alt="Mens Winter Leathers Jackets" width="300"
                         class="product-img hover">
 
                     <p class="showcase-badge">15%</p>
@@ -237,9 +255,9 @@
                         </button>
 
                         
-            <a href="assets/page/all pro/product10.html"><button class="btn-action">
+            <a href="/assets/page/all pro/index - Copy (10).html pro/index - Copy (10).html"><a href="/assets/page/all pro/index - Copy (10).html pro/index - Copy (10).html"><a href="/assets/page/all pro/index - Copy (10).html pro/index - Copy (10).html"><button class="btn-action">
                             <ion-icon name="eye-outline"></ion-icon>
-                        </button></a>
+                        </button></a></a></a>
 
 
                         <button class="btn-action add-to-cart">
@@ -250,9 +268,9 @@
 
                 <div class="showcase-content">
 
-                    <a href="/assets/page/all pro/product10.html" class="showcase-category">jacket</a>
+                    <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-category">jacket</a>
 
-                    <a href="/assets/page/all pro/product10.html">
+                    <a href="assets/page/product/all pro/index - Copy (10).html">
                         <h3 class="showcase-title">Mens Winter Leathers Jackets</h3>
                     </a>
 
@@ -274,9 +292,9 @@
             <div class="showcase">
 
                 <div class="showcase-banner product-image">
-                    <img src="./assets/images/products/jacket-5.jpg" alt="MEN Yarn Fleece Full-Zip Jacket"
+                    <img src="/assets/images/products/jacket-5.jpg" alt="MEN Yarn Fleece Full-Zip Jacket"
                         class="product-img default" width="300">
-                    <img src="./assets/images/products/jacket-6.jpg" alt="MEN Yarn Fleece Full-Zip Jacket"
+                    <img src="/assets/images/products/jacket-6.jpg" alt="MEN Yarn Fleece Full-Zip Jacket"
                         class="product-img hover" width="300">
 
                     <div class="showcase-actions">
@@ -285,9 +303,9 @@
                         </button>
 
                         
-            <a href="/assets/page/all pro/product10.html"><button class="btn-action">
+            <a href="assets/page/all pro/index - Copy (10).html"><a href="/assets/page/all pro/index - Copy (10).html pro/index - Copy (10).html"><a href="/assets/page/all pro/index - Copy (10).html pro/index - Copy (10).html"><button class="btn-action">
                             <ion-icon name="eye-outline"></ion-icon>
-                        </button></a>
+                        </button></a></a></a>
 
 
 
@@ -299,10 +317,10 @@
                 </div>
 
                 <div class="showcase-content">
-                    <a href="/assets/page/all pro/product10.html" class="showcase-category">Jacket</a>
+                    <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-category">Jacket</a>
 
                     <h3>
-                        <a href="/assets/page/all pro/product10.html" class="showcase-title">MEN Yarn Fleece Full-Zip Jacket</a>
+                        <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-title">MEN Yarn Fleece Full-Zip Jacket</a>
                     </h3>
 
                     <div class="showcase-rating">
@@ -322,14 +340,13 @@
 
             </div>
 
-
-
+            
             <div class="showcase">
 
                 <div class="showcase-banner product-image">
-                    <img src="./assets/images/products/shoe-2.jpg" alt="Casual Men's Brown shoes"
+                    <img src="/assets/images/products/shoe-2.jpg" alt="Casual Men's Brown shoes"
                         class="product-img default" width="300">
-                    <img src="./assets/images/products/shoe-2_1.jpg" alt="Casual Men's Brown shoes"
+                    <img src="/assets/images/products/shoe-2_1.jpg" alt="Casual Men's Brown shoes"
                         class="product-img hover" width="300">
 
                     <div class="showcase-actions">
@@ -337,11 +354,11 @@
                             <ion-icon name="heart-outline"></ion-icon>
                         </button>
 
-                        <a href="/assets/page/all pro/product10.html">
-            <a href="/assets/page/all pro/product10.html"><button class="btn-action">
+                        
+            <a href="assets/page/all pro/index - Copy (10).html"><a href="/assets/page/all pro/index - Copy (10).html pro/index - Copy (10).html"><a href="/assets/page/all pro/index - Copy (10).html pro/index - Copy (10).html"><button class="btn-action">
                             <ion-icon name="eye-outline"></ion-icon>
-                        </button></a>
-</a>
+                        </button></a></a></a>
+
 
 
 
@@ -352,10 +369,10 @@
                 </div>
 
                 <div class="showcase-content">
-                    <a href="/assets/page/all pro/product10.html" class="showcase-category">casual</a>
+                    <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-category">casual</a>
 
                     <h3>
-                        <a href="/assets/page/all pro/product10.html" class="showcase-title">Casual Men's Brown shoes</a>
+                        <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-title">Casual Men's Brown shoes</a>
                     </h3>
 
                     <div class="showcase-rating">
@@ -378,9 +395,9 @@
             <div class="showcase">
 
                 <div class="showcase-banner product-image">
-                    <img src="./assets/images/products/watch-3.jpg" alt="Pocket Watch Leather Pouch"
+                    <img src="/assets/images/products/watch-3.jpg" alt="Pocket Watch Leather Pouch"
                         class="product-img default" width="300">
-                    <img src="./assets/images/products/watch-4.jpg" alt="Pocket Watch Leather Pouch"
+                    <img src="/assets/images/products/watch-4.jpg" alt="Pocket Watch Leather Pouch"
                         class="product-img hover" width="300">
 
                     <p class="showcase-badge angle black">sale</p>
@@ -391,9 +408,9 @@
                         </button>
 
                         
-            <a href="/assets/page/all pro/product10.html"><button class="btn-action">
+            <a href="assets/page/all pro/index - Copy (10).html"><a href="/assets/page/all pro/index - Copy (10).html pro/index - Copy (10).html"><a href="/assets/page/all pro/index - Copy (10).html pro/index - Copy (10).html"><button class="btn-action">
                             <ion-icon name="eye-outline"></ion-icon>
-                        </button></a>
+                        </button></a></a></a>
 
 
 
@@ -405,10 +422,10 @@
                 </div>
 
                 <div class="showcase-content">
-                    <a href="/assets/page/all pro/product10.html" class="showcase-category">watches</a>
+                    <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-category">watches</a>
 
                     <h3>
-                        <a href="/assets/page/all pro/product10.html" class="showcase-title">Pocket Watch Leather Pouch</a>
+                        <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-title">Pocket Watch Leather Pouch</a>
                     </h3>
 
                     <div class="showcase-rating">
@@ -431,9 +448,9 @@
             <div class="showcase">
 
                 <div class="showcase-banner product-image">
-                    <img src="./assets/images/products/watch-1.jpg" alt="Smart watche Vital Plus"
+                    <img src="/assets/images/products/watch-1.jpg" alt="Smart watche Vital Plus"
                         class="product-img default" width="300">
-                    <img src="./assets/images/products/watch-2.jpg" alt="Smart watche Vital Plus"
+                    <img src="/assets/images/products/watch-2.jpg" alt="Smart watche Vital Plus"
                         class="product-img hover" width="300">
 
                     <div class="showcase-actions">
@@ -442,9 +459,9 @@
                         </button>
 
                         
-            <a href="/assets/page/all pro/product10.html"><button class="btn-action">
+            <a href="assets/page/all pro/index - Copy (10).html"><a href="/assets/page/all pro/index - Copy (10).html pro/index - Copy (10).html"><a href="/assets/page/all pro/index - Copy (10).html pro/index - Copy (10).html"><button class="btn-action">
                             <ion-icon name="eye-outline"></ion-icon>
-                        </button></a>
+                        </button></a></a></a>
 
 
 
@@ -456,10 +473,10 @@
                 </div>
 
                 <div class="showcase-content">
-                    <a href="/assets/page/all pro/product10.html" class="showcase-category">watches</a>
+                    <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-category">watches</a>
 
                     <h3>
-                        <a href="/assets/page/all pro/product10.html" class="showcase-title">Smart watche Vital Plus</a>
+                        <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-title">Smart watche Vital Plus</a>
                     </h3>
 
                     <div class="showcase-rating">
@@ -482,9 +499,9 @@
             <div class="showcase">
 
                 <div class="showcase-banner product-image">
-                    <img src="./assets/images/products/jacket-1.jpg" alt="Mens Winter Leathers Jackets"
+                    <img src="/assets/images/products/jacket-1.jpg" alt="Mens Winter Leathers Jackets"
                         class="product-img default" width="300">
-                    <img src="./assets/images/products/jacket-2.jpg" alt="Mens Winter Leathers Jackets"
+                    <img src="/assets/images/products/jacket-2.jpg" alt="Mens Winter Leathers Jackets"
                         class="product-img hover" width="300">
 
                     <div class="showcase-actions">
@@ -493,9 +510,9 @@
                         </button>
 
                         
-            <a href="/assets/page/all pro/product10.html"><button class="btn-action">
+            <a href="assets/page/all pro/index - Copy (10).html"><a href="/assets/page/all pro/index - Copy (10).html pro/index - Copy (10).html"><a href="/assets/page/all pro/index - Copy (10).html pro/index - Copy (10).html"><button class="btn-action">
                             <ion-icon name="eye-outline"></ion-icon>
-                        </button></a>
+                        </button></a></a></a>
 
 
 
@@ -507,10 +524,10 @@
                 </div>
 
                 <div class="showcase-content">
-                    <a href="/assets/page/all pro/product10.html" class="showcase-category">T-shirt</a>
+                    <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-category">T-shirt</a>
 
                     <h3>
-                        <a href="/assets/page/all pro/product10.html" class="showcase-title">Mens Winter Leathers T-shirt</a>
+                        <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-title">Mens Winter Leathers T-shirt</a>
                     </h3>
 
                     <div class="showcase-rating">
@@ -533,9 +550,9 @@
             <div class="showcase">
 
                 <div class="showcase-banner product-image">
-                    <img src="./assets/images/products/sports-2.jpg" alt="Trekking & Running Shoes - black"
+                    <img src="/assets/images/products/sports-2.jpg" alt="Trekking & Running Shoes - black"
                         class="product-img default" width="300">
-                    <img src="./assets/images/products/sports-4.jpg" alt="Trekking & Running Shoes - black"
+                    <img src="/assets/images/products/sports-4.jpg" alt="Trekking & Running Shoes - black"
                         class="product-img hover" width="300">
 
                     <p class="showcase-badge angle black">sale</p>
@@ -546,9 +563,9 @@
                         </button>
 
                         
-            <a href="/assets/page/all pro/product10.html"><button class="btn-action">
+            <a href="assets/page/all pro/index - Copy (10).html"><a href="/assets/page/all pro/index - Copy (10).html pro/index - Copy (10).html"><a href="/assets/page/all pro/index - Copy (10).html pro/index - Copy (10).html"><button class="btn-action">
                             <ion-icon name="eye-outline"></ion-icon>
-                        </button></a>
+                        </button></a></a></a>
 
 
 
@@ -560,10 +577,10 @@
                 </div>
 
                 <div class="showcase-content">
-                    <a href="/assets/page/all pro/product10.html" class="showcase-category">sports</a>
+                    <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-category">sports</a>
 
                     <h3>
-                        <a href="/assets/page/all pro/product10.html" class="showcase-title">Trekking & Running Shoes - black</a>
+                        <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-title">Trekking & Running Shoes - black</a>
                     </h3>
 
                     <div class="showcase-rating">
@@ -586,9 +603,9 @@
             <div class="showcase">
 
                 <div class="showcase-banner product-image">
-                    <img src="./assets/images/products/shoe-1.jpg" alt="Men's Leather Formal Wear shoes"
+                    <img src="/assets/images/products/shoe-1.jpg" alt="Men's Leather Formal Wear shoes"
                         class="product-img default" width="300">
-                    <img src="./assets/images/products/shoe-1_1.jpg" alt="Men's Leather Formal Wear shoes"
+                    <img src="/assets/images/products/shoe-1_1.jpg" alt="Men's Leather Formal Wear shoes"
                         class="product-img hover" width="300">
 
                     <div class="showcase-actions">
@@ -597,9 +614,9 @@
                         </button>
 
                         
-            <a href="/assets/page/all pro/product10.html"><button class="btn-action">
+            <a href="assets/page/all pro/index - Copy (10).html"><a href="/assets/page/all pro/index - Copy (10).html pro/index - Copy (10).html"><a href="/assets/page/all pro/index - Copy (10).html pro/index - Copy (10).html"><button class="btn-action">
                             <ion-icon name="eye-outline"></ion-icon>
-                        </button></a>
+                        </button></a></a></a>
 
 
 
@@ -611,10 +628,10 @@
                 </div>
 
                 <div class="showcase-content">
-                    <a href="/assets/page/all pro/product10.html" class="showcase-category">formal</a>
+                    <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-category">formal</a>
 
                     <h3>
-                        <a href="/assets/page/all pro/product10.html" class="showcase-title">Men's Leather Formal Wear shoes</a>
+                        <a href="assets/page/product/all pro/index - Copy (10).html" class="showcase-title">Men's Leather Formal Wear shoes</a>
                     </h3>
 
                     <div class="showcase-rating">
@@ -633,23 +650,10 @@
                 </div>
 
             </div>
-
         </div>
 
     </div>
     <!--// PRODUCT GRID //-->
-
-        <!-- CTA Section -->
-    <section class="cta-section" data-aos="fade-up">
-      <div class="container">
-        <h2>Ready to Experience E-Store?</h2>
-        <p>
-          Join thousands of satisfied customers who trust us for their shopping
-          needs.
-        </p>
-        <a href="/assets/page/shop/shop.html" class="cta-btn">Shop Now</a>
-      </div>
-    </section>
 
     <!-- FOOTER -->
     <footer>
@@ -713,16 +717,21 @@
         </div>
         <div class="foot">
 
-            <img src="./assets/images/payment.png" alt="payment method" class="payment-img">
+            <img src="/assets/images/payment.png" alt="payment method" class="payment-img">
 
             <p class="copyright">
-                Copyright &copy; <a href="https://wa.me/201033842339" target="_blank">Ahmed Sami</a> all rights reserved.
+                Copyright &copy; <a href="#">Ahmed Sami</a> all rights reserved.
             </p>
 
     </footer>
     <!--// FOOTER //-->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <!--
+    - ionIcon link
+    -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <!-- bootstrap -->
     <script src="vendor/bootstrap/js/bootstrap.js"></script>
     <!-- aos -->
@@ -733,7 +742,9 @@
         });
     </script>
     <!-- Custom Script -->
-    <script src="assets/js/main.js"></script>
+    <script src="script.js"></script>
+    <script src="/assets/js/main.js"></script>
+    
 </body>
 
 </html>
