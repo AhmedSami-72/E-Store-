@@ -6,7 +6,7 @@
         }
         
         body {
-            background: #f5f5f5;
+            background: #4cb6ed;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -14,7 +14,7 @@
         }
         
         .signup-container {
-            background: #fff;
+            background: #ffffff73;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             width: 100%;
@@ -84,7 +84,7 @@
         }
         
         .login-link a {
-            color: #3498db;
+            color: #ffffff;
             text-decoration: none;
         }
         
