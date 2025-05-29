@@ -18,7 +18,7 @@
 ---
 
 <h2 id="demo">🎬 Demo</h2>
-<iframe src="https://drive.google.com/file/d/1urOuUezoS1pGAfevpa96zZpeCdoBVHhs/preview" width="100%" height="480" allow="autoplay"></iframe>
+<iframe src="https://drive.google.com/file/d/1urOuUezoS1pGAfevpa96zZpeCdoBVHhs/preview" width="640" height="480" allow="autoplay"></iframe>
 
 > 🖱 Click the image to watch the full demo video explaining the features of E-STORE.
 
