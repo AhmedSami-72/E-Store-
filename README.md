@@ -20,7 +20,7 @@
 ## 🎬 Demo
 
 <!-- Replace the placeholders below with your actual video link and YouTube ID -->
-[![Watch Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg)](YOUR_VIDEO_LINK)
+[![Watch Demo](https://drive.google.com/file/d/1urOuUezoS1pGAfevpa96zZpeCdoBVHhs/view?usp=sharing)
 
 > 🖱 Click the image to watch the full demo video explaining the features of E-STORE.
 
