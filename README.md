@@ -20,14 +20,10 @@
 ## 🎬 Demo
 
 [![Watch the demo](https://img.youtube.com/vi/PxvbjtA1NDk/hqdefault.jpg)](https://youtu.be/PxvbjtA1NDk)
+https://drive.google.com/file/d/1urOuUezoS1pGAfevpa96zZpeCdoBVHhs/view
 
 🖱 Click the image to watch the full demo video explaining the features of E-STORE.
 
-
-
-
-
-> 🖱 Click the image to watch the full demo video explaining the features of E-STORE.
 
 ---
 
