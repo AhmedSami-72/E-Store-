@@ -19,7 +19,7 @@
 
 ## 🎬 Demo Video
 
-[![Watch the Demo](https://i.imgur.com/MqFQG3b.png)](https://vimeo.com/1089603956/4fa36b28a7)
+[![Watch the Demo](https://i.imgur.com/MqFQG3b.png)](https://vimeo.com/1089603956)
 
 🖱 Click the image above to watch the full demo video of **E-STORE** on Vimeo.
 
