@@ -19,9 +19,10 @@
 
 ## 🎬 Demo Video
 
-[![Watch the Demo](https://i.imgur.com/abc123.png)](https://vimeo.com/1089603956/4fa36b28a7)
+[![Watch the Demo](https://drive.google.com/uc?export=view&id=1Hl6EBpgcPAEYs7eM2MhLduY2tZvNCGhH)](https://vimeo.com/1089603956/4fa36b28a7)
 
-🖱 Click the image above to watch the full demo video of **E-STORE** on Vimeo.
+🖱 انقر على الصورة أعلاه لمشاهدة العرض الكامل لفيديو **E-STORE** على Vimeo.
+
 
 
 
