@@ -17,12 +17,11 @@
 
 ---
 
-## 🎬 Demo
+## 🎬 Demo Video
 
-[![Watch the demo](https://img.youtube.com/vi/PxvbjtA1NDk/hqdefault.jpg)](https://youtu.be/PxvbjtA1NDk)
-https://drive.google.com/file/d/1urOuUezoS1pGAfevpa96zZpeCdoBVHhs/view
+[![Watch the Demo](https://i.imgur.com/MqFQG3b.png)](https://vimeo.com/1089603956/4fa36b28a7)
 
-🖱 Click the image to watch the full demo video explaining the features of E-STORE.
+🖱 Click the image above to watch the full demo video of **E-STORE** on Vimeo.
 
 
 ---
